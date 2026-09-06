@@ -70,7 +70,7 @@
   "type": "object",
   "properties": {
     "extends": {
-      "description": "When writing a custom configuration file, you don’t need to redefine every rule. Just extend the default configuration (or any already-existing configuration file).",
+      "description": "When writing a custom configuration file, you don't need to redefine every rule. Just extend the default configuration (or any already-existing configuration file).",
       "type": "string",
       "default": "default",
       "examples": ["default", "relaxed"]
