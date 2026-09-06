@@ -174,7 +174,6 @@
     "winget-pkgs-singleton-0.1.json",
     "workflows.json",
     "xs-app.json",
-    "yamllint.json",
     "deployed.json",
     "lsdlschema-0.7.json",
     "lsdlschema-1.0.json",
