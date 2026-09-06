@@ -264,34 +264,26 @@
         }
       },
       "then": {
-        "$ref": "#/definitions/tagsCommonToAllRecipes",
+        "type": "object",
         "description": "Represents a recipe in a stonecutter.",
-        "oneOf": [
+        "allOf": [
           {
-            "$ref": "#/definitions/item",
-            "title": "ingredient",
-            "description": "The ingredient for the recipe.",
-            "properties": {
-              "result": {
-                "description": "An item ID. The output item of the recipe.",
-                "type": "string"
-              },
-              "count": {
-                "description": "The amount of the output item.",
-                "type": "integer"
-              }
-            }
+            "$ref": "#/definitions/tagsCommonToAllRecipes"
           },
           {
-            "title": "ingredient",
-            "description": "The list of ingredients for the recipe.",
-            "type": "array",
-            "items": {
-              "$ref": "#/definitions/item",
-              "title": "ingredient"
-            }
+            "$ref": "#/definitions/item"
           }
-        ]
+        ],
+        "properties": {
+          "result": {
+            "description": "An item ID. The output item of the recipe.",
+            "type": "string"
+          },
+          "count": {
+            "description": "The amount of the output item.",
+            "type": "integer"
+          }
+        }
       }
     }
   ],
