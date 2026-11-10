@@ -3,10 +3,89 @@
   "version": 1,
   "schemas": [
     {
+      "name": "RFQ package",
+      "description": "A request-for-quotation package sent to a manufacturer: the parts to be priced, the documents that describe them, the bill of materials, and the commercial and quality requirements",
+      "fileMatch": ["rfq-package.json", "*.rfq-package.json"],
+      "url": "https://raw.githubusercontent.com/Freezedon/scutiqo/main/schemas/rfq-package.schema.json"
+    },
+    {
+      "name": "Ramoira brand file",
+      "description": "A brand's meaning and rules in the open Ramoira format (spec 3.x)",
+      "fileMatch": ["**/ramoira/brand.schema.json"],
+      "url": "https://ramoira.com/schema/v3/SPEC.schema.json"
+    },
+    {
+      "name": "WaveDrom",
+      "description": "WaveJSON: WaveDrom digital timing diagram, bit-field (register) and logic circuit description",
+      "fileMatch": [
+        "*.wavedrom.json",
+        "*.wavedrom.json5",
+        "*.wavejson",
+        "*.wd.json"
+      ],
+      "url": "https://wavedrom.com/schema/wavedrom.json"
+    },
+    {
+      "name": "Talewright story manifest",
+      "description": "Talewright story manifest (story.talewright.yaml) for Tale interactive stories",
+      "fileMatch": ["*.talewright.yaml"],
+      "url": "https://raw.githubusercontent.com/squid-farm/talewright/main/tooling/vscode-talewright/schemas/story.schema.json"
+    },
+    {
+      "name": "AI Page Manifest",
+      "description": "AI Page Manifest (AIPM) v1.2.0, per-page .ai.json metadata for AI crawlers and answer engines",
+      "fileMatch": ["*.ai.json"],
+      "url": "https://aigeoradar.com/schemas/aipm/1.2/page-manifest.schema.json"
+    },
+    {
+      "name": "Ameba",
+      "description": "Configuration file for Ameba, a Crystal linter and formatter",
+      "fileMatch": [".ameba.yml", ".ameba.*.yml"],
+      "url": "https://raw.githubusercontent.com/crystal-ameba/ameba/master/.ameba.yml.schema.json",
+      "versions": {
+        "1.7.0": "https://raw.githubusercontent.com/crystal-ameba/ameba/v1.7.0/.ameba.yml.schema.json"
+      }
+    },
+    {
+      "name": "CDF workspace config",
+      "description": "Cognitive Delivery governance contract: the .cdf/config.yaml of a CDF-governed workspace (adoption tier, review policy, provenance, CDI and break-glass settings, sealed fields)",
+      "fileMatch": ["**/.cdf/config.yaml"],
+      "url": "https://cognitive-delivery.github.io/contract/1.x/config-core.schema.json"
+    },
+    {
+      "name": "Context Passport",
+      "description": "Tamper-evident record of an AI agent event: what the agent was asked, what it decided, and a SHA-256 chain linking it to the record before it",
+      "fileMatch": ["*.passport.json"],
+      "url": "https://contextpassport.com/schema/v2.json"
+    },
+    {
+      "name": "Falco rules",
+      "description": "Falco runtime security rules. See https://falco.org/docs/rules/ for documentation",
+      "fileMatch": [
+        "falco_rules.yaml",
+        "falco_rules.yml",
+        "*falco-rules.yaml",
+        "*falco-rules.yml",
+        "*falco_rules.yaml",
+        "*falco_rules.yml"
+      ],
+      "url": "https://www.schemastore.org/falco.json"
+    },
+    {
       "name": "glslint config",
       "description": "glslint project config and shader-dialect preset (glslint.toml): ecosystem detection, #pragma expansion, shared-library and injected-define declarations",
       "fileMatch": ["glslint.toml"],
       "url": "https://raw.githubusercontent.com/johncarmack1984/glslint/main/schema/glslint.schema.json"
+    },
+    {
+      "name": "MeasureMap",
+      "description": "MeasureMap: the measure (bar) structure of a music score, used to align different editions and encodings of a piece",
+      "fileMatch": ["*.mm.json"],
+      "url": "https://measure-map.github.io/specification/schema/latest/measuremap.schema.json",
+      "versions": {
+        "1.0.0": "https://measure-map.github.io/specification/schema/1.0.0/measuremap.schema.json",
+        "1.0.1": "https://measure-map.github.io/specification/schema/1.0.1/measuremap.schema.json"
+      }
     },
     {
       "name": "Mermaid config",
@@ -52,6 +131,12 @@
         "hol-skill.json"
       ],
       "url": "https://raw.githubusercontent.com/hashgraph-online/skill-publish/main/schemas/skill.schema.json"
+    },
+    {
+      "name": "HOL Guard Policy",
+      "description": "Policy file for HOL Guard, which decides what AI coding agents may run",
+      "fileMatch": ["guard-policy.yaml", "guard-policy.yml"],
+      "url": "https://hol.org/schema/policy/v1alpha1"
     },
     {
       "name": "release-hub.json",
@@ -187,6 +272,7 @@
       "fileMatch": [".awc.yaml", ".awc.yml", ".awc.json", ".awc.jsonc", ".awc"],
       "url": "https://www.schemastore.org/anywork-ac-1.1.json",
       "versions": {
+        "1.1": "https://www.schemastore.org/anywork-ac-1.1.json",
         "1.0": "https://www.schemastore.org/anywork-ac-1.0.json"
       }
     },
@@ -219,6 +305,17 @@
       "description": "Aerleon policy file",
       "fileMatch": ["**/policies/**/*.yaml"],
       "url": "https://raw.githubusercontent.com/aerleon/aerleon/main/schemas/aerleon-policies.schema.json"
+    },
+    {
+      "name": "AER-1 agent execution receipt",
+      "description": "Verifiable execution receipt for AI agent tool calls (AER-1, IETF draft-zambo-aer1-26)",
+      "fileMatch": ["*.aer1.json"],
+      "url": "https://zambo.dev/aer-1/schema.json"
+    },
+    {
+      "name": "Agent Run Metrics",
+      "description": "Report in the Agent Run Metrics format for resource accounting of language-model agent runs (IETF Internet-Draft draft-arsentev-agent-run-metrics)",
+      "url": "https://arsentev.ai/schemas/agent-run-metrics.json"
     },
     {
       "name": ".agripparc.json",
@@ -267,7 +364,7 @@
       "name": "ABCInventoryModuleData",
       "description": "ABCInventoryModuleData defining the structure of ABCInventoryModuleData including Principal Data, inventory, and transaction data in ABC-Plan's Inventory Management Module",
       "fileMatch": ["abc-inventory-module-data-*.json"],
-      "url": "https://www.schemastore.org/abc-inventory-module-data-5.3.0.json",
+      "url": "https://www.schemastore.org/abc-inventory-module-data-5.4.0.json",
       "versions": {
         "1.0.0": "https://www.schemastore.org/abc-inventory-module-data-1.0.0.json",
         "2.0.0": "https://www.schemastore.org/abc-inventory-module-data-2.0.0.json",
@@ -275,27 +372,32 @@
         "4.0.0": "https://www.schemastore.org/abc-inventory-module-data-4.0.0.json",
         "5.1.0": "https://www.schemastore.org/abc-inventory-module-data-5.1.0.json",
         "5.2.0": "https://www.schemastore.org/abc-inventory-module-data-5.2.0.json",
-        "5.3.0": "https://www.schemastore.org/abc-inventory-module-data-5.3.0.json"
+        "5.3.0": "https://www.schemastore.org/abc-inventory-module-data-5.3.0.json",
+        "5.4.0": "https://www.schemastore.org/abc-inventory-module-data-5.4.0.json"
       }
     },
     {
       "name": "ABCClinicalDemandForecast",
       "description": "ABCClinicalDemandForecast defining the structure of clinical trial demand forecasting data in ABC-Plan",
       "fileMatch": ["abc-clinical-demand-forecast-*.json"],
-      "url": "https://www.schemastore.org/abc-clinical-demand-forecast-5.0.0.json",
+      "url": "https://www.schemastore.org/abc-clinical-demand-forecast-6.0.0.json",
       "versions": {
         "1.0.0": "https://www.schemastore.org/abc-clinical-demand-forecast-1.0.0.json",
         "2.0.0": "https://www.schemastore.org/abc-clinical-demand-forecast-2.0.0.json",
         "3.0.0": "https://www.schemastore.org/abc-clinical-demand-forecast-3.0.0.json",
         "4.0.0": "https://www.schemastore.org/abc-clinical-demand-forecast-4.0.0.json",
-        "5.0.0": "https://www.schemastore.org/abc-clinical-demand-forecast-5.0.0.json"
+        "5.0.0": "https://www.schemastore.org/abc-clinical-demand-forecast-5.0.0.json",
+        "5.1.0": "https://www.schemastore.org/abc-clinical-demand-forecast-5.1.0.json",
+        "5.2.0": "https://www.schemastore.org/abc-clinical-demand-forecast-5.2.0.json",
+        "5.3.0": "https://www.schemastore.org/abc-clinical-demand-forecast-5.3.0.json",
+        "6.0.0": "https://www.schemastore.org/abc-clinical-demand-forecast-6.0.0.json"
       }
     },
     {
       "name": "ABCSupplyPlan",
       "description": "ABCSupplyPlan representing all the state for performing inventory optimization and expiry analysis in ABC-Plan MasterPlanner",
       "fileMatch": ["abc-supply-plan-*.json"],
-      "url": "https://www.schemastore.org/abc-supply-plan-14.0.0.json",
+      "url": "https://www.schemastore.org/abc-supply-plan-14.3.0.json",
       "versions": {
         "1.0.0": "https://www.schemastore.org/abc-supply-plan-1.0.0.json",
         "2.0.0": "https://www.schemastore.org/abc-supply-plan-2.0.0.json",
@@ -315,7 +417,10 @@
         "11.4.0": "https://www.schemastore.org/abc-supply-plan-11.4.0.json",
         "12.0.0": "https://www.schemastore.org/abc-supply-plan-12.0.0.json",
         "13.0.0": "https://www.schemastore.org/abc-supply-plan-13.0.0.json",
-        "14.0.0": "https://www.schemastore.org/abc-supply-plan-14.0.0.json"
+        "14.0.0": "https://www.schemastore.org/abc-supply-plan-14.0.0.json",
+        "14.1.0": "https://www.schemastore.org/abc-supply-plan-14.1.0.json",
+        "14.2.0": "https://www.schemastore.org/abc-supply-plan-14.2.0.json",
+        "14.3.0": "https://www.schemastore.org/abc-supply-plan-14.3.0.json"
       }
     },
     {
@@ -373,6 +478,12 @@
       "url": "https://www.schemastore.org/aih-org-policy.json"
     },
     {
+      "name": "aibench",
+      "description": "aibench config (aibench.yaml): endpoint profiles and the prompt sets tested against them",
+      "fileMatch": ["aibench.yaml"],
+      "url": "https://raw.githubusercontent.com/petrsx/aibench/main/schema/aibench.schema.json"
+    },
+    {
       "name": "AIConfig",
       "description": "AIConfig that is used to store generative AI prompts, models and model parameters",
       "fileMatch": [
@@ -414,6 +525,12 @@
       "description": "Angular CLI configuration file",
       "fileMatch": [".angular-cli.json", "angular-cli.json"],
       "url": "https://raw.githubusercontent.com/angular/angular-cli/v10.1.6/packages/angular/cli/lib/config/schema.json"
+    },
+    {
+      "name": "apm-policy.yml",
+      "description": "Agent Package Manager (APM) organization policy file",
+      "fileMatch": ["apm-policy.yml"],
+      "url": "https://microsoft.github.io/apm/specs/schemas/policy-v0.1.schema.json"
     },
     {
       "name": "apple-app-site-association",
@@ -524,6 +641,12 @@
       "url": "https://raw.githubusercontent.com/architect/parser/v2.3.0/arc-schema.json"
     },
     {
+      "name": "arch-lint.toml",
+      "description": "Configuration file for arch-lint, an architecture linter for Rust and multi-language projects",
+      "fileMatch": ["arch-lint.toml", ".arch-lint.toml"],
+      "url": "https://raw.githubusercontent.com/ynishi/arch-lint/main/schema/arch-lint.schema.json"
+    },
+    {
       "name": "Archival editor configuration",
       "description": "Per-object editor configuration for an archival site",
       "fileMatch": ["archival_editor.toml"],
@@ -561,6 +684,12 @@
       "name": "Argo Workflows",
       "description": "Argo Workflow configuration file",
       "url": "https://raw.githubusercontent.com/argoproj/argo-workflows/master/api/jsonschema/schema.json"
+    },
+    {
+      "name": "Arity",
+      "description": "Configuration file for Arity, a language server, formatter, and linter for R",
+      "fileMatch": ["arity.toml"],
+      "url": "https://arity.cc/arity.schema.json"
     },
     {
       "name": "artifacthub-repo.yml",
@@ -812,6 +941,8 @@
       "url": "https://raw.githubusercontent.com/ClementTsang/bottom/main/schema/v0.10/bottom.json",
       "versions": {
         "nightly": "https://raw.githubusercontent.com/ClementTsang/bottom/main/schema/nightly/bottom.json",
+        "0.15.0": "https://raw.githubusercontent.com/ClementTsang/bottom/main/schema/v0.15.0/bottom.json",
+        "0.14.9": "https://raw.githubusercontent.com/ClementTsang/bottom/main/schema/v0.14.9/bottom.json",
         "0.14.7": "https://raw.githubusercontent.com/ClementTsang/bottom/main/schema/v0.14.7/bottom.json",
         "0.14.0": "https://raw.githubusercontent.com/ClementTsang/bottom/main/schema/v0.14.0/bottom.json",
         "0.13.0": "https://raw.githubusercontent.com/ClementTsang/bottom/main/schema/v0.13.0/bottom.json",
@@ -1064,6 +1195,18 @@
       "url": "https://github.com/cloudcannon/configuration-types/releases/latest/download/cloudcannon-schemas.schema.json"
     },
     {
+      "name": "CloudCannon Initial Site Settings",
+      "description": "Supporting configuration file for CloudCannon containing build settings and site mode for new sites",
+      "fileMatch": ["**/.cloudcannon/initial-site-settings.json"],
+      "url": "https://github.com/cloudcannon/configuration-types/releases/latest/download/cloudcannon-initial-site-settings.schema.json"
+    },
+    {
+      "name": "CloudCannon Routing",
+      "description": "Supporting configuration file for CloudCannon containing an array of route rules for redirects and rewrites",
+      "fileMatch": ["**/.cloudcannon/routing.json"],
+      "url": "https://github.com/cloudcannon/configuration-types/releases/latest/download/cloudcannon-routing.schema.json"
+    },
+    {
       "name": "Lando (landofile)",
       "description": "The configuration file for a Lando app. Documentation: https://github.com/lando-community/lando-spec",
       "fileMatch": [".lando.yml", ".lando.*.yml"],
@@ -1118,6 +1261,12 @@
       "url": "https://fasterci.com/config.schema.json"
     },
     {
+      "name": "Fatou",
+      "description": "Configuration file for Fatou, a language server, formatter, and linter for Julia",
+      "fileMatch": ["fatou.toml"],
+      "url": "https://fatou.dev/fatou.schema.json"
+    },
+    {
       "name": "Fence configuration",
       "description": "Configuration file for fence, a lightweight, container-free sandbox for running commands with network and filesystem restrictions",
       "fileMatch": ["fence.json"],
@@ -1151,6 +1300,18 @@
       "description": "fly.io, a cloud provider, configuration",
       "fileMatch": ["fly.toml"],
       "url": "https://www.schemastore.org/fly.json"
+    },
+    {
+      "name": "Format config",
+      "description": "Configuration file for Format, for making PDFs with web technologies. Documentation: https://format.dev/docs/studio/configuration",
+      "fileMatch": ["format.config.json", "format.config.*.json"],
+      "url": "https://format.dev/schema/format-config.json"
+    },
+    {
+      "name": "Formhaus form definition",
+      "description": "Declarative JSON form definition for Formhaus, a headless form engine. Documentation: https://formhaus.dev",
+      "fileMatch": ["*.formhaus.json"],
+      "url": "https://formhaus.dev/schema/form-definition.json"
     },
     {
       "name": "Freifunk.de Community API",
@@ -1197,6 +1358,12 @@
       "description": "Backport configuration file",
       "fileMatch": [".backportrc.json"],
       "url": "https://www.schemastore.org/backportrc.json"
+    },
+    {
+      "name": "Badness",
+      "description": "Configuration file for Badness, a language server, formatter, and linter for LaTeX",
+      "fileMatch": ["badness.toml"],
+      "url": "https://badness.dev/badness.schema.json"
     },
     {
       "name": "basedpyright",
@@ -1345,10 +1512,63 @@
       "url": "https://www.schemastore.org/bosh-deploy-config.json"
     },
     {
+      "name": "BOSH Job Spec",
+      "description": "Job Spec for BOSH Releases",
+      "fileMatch": ["**/jobs/*/spec"],
+      "url": "https://www.schemastore.org/bosh-job-spec.json"
+    },
+    {
+      "name": "BOSH Package Spec",
+      "description": "Package Spec for BOSH Releases",
+      "fileMatch": ["**/packages/*/spec"],
+      "url": "https://www.schemastore.org/bosh-package-spec.json"
+    },
+    {
+      "name": "BOSH Ops File",
+      "description": "Ops File for BOSH CLI",
+      "url": "https://www.schemastore.org/bosh-ops-file.json"
+    },
+    {
       "name": "Boyka Framework",
       "description": "Boyka Framework config file",
       "fileMatch": ["boyka-config.json"],
       "url": "https://www.schemastore.org/boyka-config.json"
+    },
+    {
+      "name": "Breadkit board definition",
+      "description": "Board geometry and electrical strip definitions for Breadkit",
+      "fileMatch": ["*.bkboard.yml", "*.bkboard.yaml"],
+      "url": "https://breadkit.github.io/breadkit/schema/board-v1.json"
+    },
+    {
+      "name": "Breadkit circuit IR",
+      "description": "Resolved single-board Breadkit circuit interchange format",
+      "fileMatch": ["*.bkir.json"],
+      "url": "https://breadkit.github.io/breadkit/schema/ir-v1.json"
+    },
+    {
+      "name": "Breadkit circuit IR v2",
+      "description": "Resolved multi-board Breadkit circuit interchange format",
+      "fileMatch": ["*.bkir-v2.json"],
+      "url": "https://breadkit.github.io/breadkit/schema/ir-v2.json"
+    },
+    {
+      "name": "Breadkit lint results",
+      "description": "JSON results produced by the Breadkit circuit linter",
+      "fileMatch": ["*.bklint.json"],
+      "url": "https://breadkit.github.io/breadkit-lint/schemas/lint-v1.json"
+    },
+    {
+      "name": "Breadkit part definition",
+      "description": "Part pin, footprint, and rendering definitions for Breadkit",
+      "fileMatch": ["*.bkpart.yml", "*.bkpart.yaml"],
+      "url": "https://breadkit.github.io/breadkit/schema/part-v1.json"
+    },
+    {
+      "name": "BrickKit",
+      "description": "BrickKit project configuration (brickkit.yaml): declares components, install sources, deploy target and resource bindings",
+      "fileMatch": ["brickkit.yaml", "brickkit.*.yaml"],
+      "url": "https://raw.githubusercontent.com/brickKit/brickKit/main/schemas/brickkit.schema.json"
     },
     {
       "name": "behat.yml",
@@ -1373,6 +1593,12 @@
       "description": "Scheduled job configuration for pyproject.toml",
       "fileMatch": [],
       "url": "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/partial-scheduled.json"
+    },
+    {
+      "name": "partial-inwards.json",
+      "description": "Inwards architecture linter configuration for pyproject.toml",
+      "fileMatch": [],
+      "url": "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/partial-inwards.json"
     },
     {
       "name": "bozr.suite.json",
@@ -1535,6 +1761,12 @@
       "url": "https://raw.githubusercontent.com/eliashaeussler/cache-warmup/main/res/cache-warmup-config.schema.json"
     },
     {
+      "name": "Calibration Reporting Standard (CRS) v0.1",
+      "description": "13-field structured attestation protocol for AI agent calibration disclosure in regulated financial systems. Implements ISO 42001 Clause 9.1 for agentic AI",
+      "fileMatch": ["crs-attestation.json", "*.crs-attestation.json"],
+      "url": "https://ericchantc.github.io/crs-specification/crs-v0.1-schema.json"
+    },
+    {
       "name": "Calqulus pipeline",
       "description": "Qualisys Calqulus pipeline",
       "fileMatch": ["*.calqulus.yaml", "*.calqulus.yml"],
@@ -1569,6 +1801,18 @@
       "url": "https://raw.githubusercontent.com/usecannon/cannon/main/packages/lsp/src/schema.json"
     },
     {
+      "name": "CanvasXpress cxplot",
+      "description": "CanvasXpress materialized grammar-of-graphics figure (layers, scales, coordinates, facets)",
+      "fileMatch": ["*.cxplot.json"],
+      "url": "https://www.canvasxpress.org/schema/cxplot-1.0.schema.json"
+    },
+    {
+      "name": "CanvasXpress figure",
+      "description": "Portable, self-describing CanvasXpress figure ({data, config}): a reproducible chart interchange format",
+      "fileMatch": ["*.cxfigure.json", "*.cx.json"],
+      "url": "https://www.canvasxpress.org/schema/cxfigure-1.0.schema.json"
+    },
+    {
       "name": "Carafe",
       "description": "Carafe compatible JavaScript Bundles",
       "url": "https://carafe.fm/schema/draft-02/bundle.schema.json",
@@ -1576,6 +1820,12 @@
         "draft-02": "https://carafe.fm/schema/draft-02/bundle.schema.json",
         "draft-01": "https://carafe.fm/schema/draft-01/bundle.schema.json"
       }
+    },
+    {
+      "name": "Cargo Config",
+      "description": "Configuration for Cargo, the Rust package manager and build tool",
+      "fileMatch": ["**/.cargo/config", "**/.cargo/config.toml"],
+      "url": "https://www.schemastore.org/cargo-config.json"
     },
     {
       "name": "Cargo Manifest",
@@ -1594,6 +1844,16 @@
       "description": "Backstage Catalog Info",
       "fileMatch": ["catalog-info.yaml", "*.catalog-info.yaml"],
       "url": "https://www.schemastore.org/catalog-info.json"
+    },
+    {
+      "name": "CausalJSON",
+      "description": "Open Causal Graph Format: causal graphs (DAGs, ADMGs, MAGs, PAGs, causal loop diagrams) with citation metadata",
+      "fileMatch": ["*.causal.json"],
+      "url": "https://opencausal.org/causaljson/0.2/causaljson.schema.json",
+      "versions": {
+        "0.1": "https://opencausal.org/causaljson/0.1/causaljson.schema.json",
+        "0.2": "https://opencausal.org/causaljson/0.2/causaljson.schema.json"
+      }
     },
     {
       "name": "Changie",
@@ -1686,6 +1946,12 @@
       "url": "https://raw.githubusercontent.com/conda-forge/conda-smithy/main/conda_smithy/data/conda-forge.json"
     },
     {
+      "name": "Context Reasoning Format (CRF)",
+      "description": "Organizational context as a graph of entities - organizations, systems, policies, facts, capabilities - that decision records reference and are validated against",
+      "fileMatch": ["*.crf.yaml", "*.crf.yml", "*.crf.json"],
+      "url": "https://raw.githubusercontent.com/reasoning-formats/reasoning-formats/main/crf/schema/crf-schema.json"
+    },
+    {
       "name": "Convex",
       "description": "Configuration for Convex project settings",
       "fileMatch": ["convex.json"],
@@ -1768,6 +2034,12 @@
       "description": "Configuration file for Claude Code",
       "fileMatch": ["**/.claude/settings.json"],
       "url": "https://www.schemastore.org/claude-code-settings.json"
+    },
+    {
+      "name": "Claudexor Project Configuration",
+      "description": "Project settings for the Claudexor coding-agent control plane",
+      "fileMatch": ["**/.claudexor/config.yaml"],
+      "url": "https://cdn.jsdelivr.net/npm/@claudexor/schema@4.8.1/generated/ProjectConfig.schema.json"
     },
     {
       "name": "cmakefmt",
@@ -1863,6 +2135,12 @@
       }
     },
     {
+      "name": "Dark Factory consumer config",
+      "description": "Unified darkfactory.yaml for the Cerebe / Dark Factory CLI (doctrine, deny, hooks, MCP, critics, policy)",
+      "fileMatch": ["darkfactory.yaml", "darkfactory.yml"],
+      "url": "https://raw.githubusercontent.com/momentiq-ai/cerebe/main/schemas/darkfactory/v1.json"
+    },
+    {
       "name": "DataYoga Connections",
       "description": "Collection of defined source and target connections used within DataYoga jobs",
       "fileMatch": ["connections.dy.yaml"],
@@ -1879,6 +2157,18 @@
       "description": "dbt-bouncer configuration file for enforcing conventions in dbt projects",
       "fileMatch": ["dbt-bouncer.yml", "dbt-bouncer.yaml"],
       "url": "https://raw.githubusercontent.com/godatadriven/dbt-bouncer/main/schema.json"
+    },
+    {
+      "name": "dbt Catalogs",
+      "description": "dbt's catalogs.yml file for catalog integrations such as Apache Iceberg",
+      "fileMatch": ["**/*dbt*/catalogs.yaml", "**/*dbt*/catalogs.yml"],
+      "url": "https://raw.githubusercontent.com/dbt-labs/dbt-jsonschema/main/schemas/latest_fusion/catalogs-latest-fusion.json"
+    },
+    {
+      "name": "dbt Cloud",
+      "description": "dbt's dbt_cloud.yml file with credentials for the dbt platform",
+      "fileMatch": ["dbt_cloud.yaml", "dbt_cloud.yml"],
+      "url": "https://raw.githubusercontent.com/dbt-labs/dbt-jsonschema/main/schemas/latest_fusion/dbt_cloud-latest-fusion.json"
     },
     {
       "name": "dbt Dependencies",
@@ -1932,6 +2222,12 @@
       "url": "https://raw.githubusercontent.com/ColumbusLabs/DebtLens/main/schema/debtlens.config.schema.json"
     },
     {
+      "name": "Decision Reasoning Format (DRF)",
+      "description": "Decision record capturing the reasoning behind a decision - constraints, objectives, assumptions, tensions and synthesis - as structured, validatable fields",
+      "fileMatch": ["*.drf.yaml", "*.drf.yml", "*.drf.json"],
+      "url": "https://raw.githubusercontent.com/reasoning-formats/reasoning-formats/main/drf/schema/drf-schema.json"
+    },
+    {
       "name": "Deck config",
       "description": "Deck is a tool for creating presentation using Markdown and Google Slides",
       "fileMatch": [
@@ -1960,6 +2256,12 @@
       "url": "https://www.schemastore.org/dein.json"
     },
     {
+      "name": "dep_sync workspace manifest",
+      "description": "Manifest for dep_sync Git multi-repository workspace synchronization",
+      "fileMatch": ["**/.dep-sync/manifest.yaml"],
+      "url": "https://www.schemastore.org/dep-sync.json"
+    },
+    {
       "name": "Dependency cruiser",
       "description": "Configuration file for Dependency cruiser",
       "fileMatch": ["dependency-cruiser.config.json"],
@@ -1973,6 +2275,16 @@
         "**/.deploystack/config.yaml"
       ],
       "url": "https://cdnx.deploystack.io/schema/config.yml.json"
+    },
+    {
+      "name": "Design Tokens Community Group format",
+      "description": "Design token files using the DTCG format",
+      "url": "https://www.designtokens.org/schemas/2025.10/format.json"
+    },
+    {
+      "name": "Design Tokens Community Group resolver",
+      "description": "DTCG resolver documents",
+      "url": "https://www.designtokens.org/schemas/2025.10/resolver.json"
     },
     {
       "name": "Deta Spacefile",
@@ -1991,6 +2303,12 @@
       "description": "Configuration for a Devbox plugin specification",
       "fileMatch": ["devbox-plugin.json"],
       "url": "https://raw.githubusercontent.com/jetify-com/devbox/main/.schema/devbox-plugin.schema.json"
+    },
+    {
+      "name": "devconcurrent",
+      "description": "Easily manage multiple, isolated development environments",
+      "fileMatch": ["**/devconcurrent/config.toml"],
+      "url": "https://devconcurrent.paholg.com/devconcurrent.schema.json"
     },
     {
       "name": "Drupal Breakpoints",
@@ -2213,6 +2531,12 @@
       "url": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainerFeature.schema.json"
     },
     {
+      "name": ".devprune.json",
+      "description": "Per-repository configuration for dev-prune, the lockfile-verified workspace cleaner",
+      "fileMatch": [".devprune.json"],
+      "url": "https://devprune.vkrishna04.me/schemas/v1/devprune.schema.json"
+    },
+    {
       "name": "Codecov configuration files",
       "description": "codecov.yml files",
       "fileMatch": [
@@ -2224,18 +2548,6 @@
         "codecov.yml"
       ],
       "url": "https://www.schemastore.org/codecov.json"
-    },
-    {
-      "name": "CodeShip Pro services configuration files",
-      "description": "codeship-services.yml files",
-      "fileMatch": ["codeship-services.yml"],
-      "url": "https://www.schemastore.org/codeship-services.json"
-    },
-    {
-      "name": "CodeShip Pro steps configuration files",
-      "description": "codeship-steps.yml files",
-      "fileMatch": ["codeship-steps.yml"],
-      "url": "https://www.schemastore.org/codeship-steps.json"
     },
     {
       "name": "vcpkg manifest file",
@@ -2272,6 +2584,12 @@
       "description": "LLVM compilation database",
       "fileMatch": ["compile_commands.json"],
       "url": "https://www.schemastore.org/compile-commands.json"
+    },
+    {
+      "name": "complexipy",
+      "description": "complexipy cognitive complexity analyzer configuration file",
+      "fileMatch": ["complexipy.toml", ".complexipy.toml"],
+      "url": "https://www.schemastore.org/complexipy.json"
     },
     {
       "name": "commands.json",
@@ -2508,6 +2826,15 @@
       "url": "https://raw.githubusercontent.com/mozilla/contribute.json/master/schema.json"
     },
     {
+      "name": "Cosmoner app",
+      "description": "Cosmoner app deployment template",
+      "fileMatch": [
+        "**/.cosmoner/deployment.yaml",
+        "**/.cosmoner/deployment.yml"
+      ],
+      "url": "https://cosmoner.com/schemas/app.schema.json"
+    },
+    {
       "name": "crowdin.yml",
       "description": "Crowdin, a crowd-translation platform. Documentation: https://support.crowdin.com/configuration-file/",
       "fileMatch": ["**/crowdin.yml"],
@@ -2587,6 +2914,24 @@
       "url": "https://www.schemastore.org/csslintrc.json"
     },
     {
+      "name": "Dagger module",
+      "description": "Module metadata for the Dagger CI/CD engine: SDK, dependencies, and engine version",
+      "fileMatch": ["dagger.json"],
+      "url": "https://docs.dagger.io/reference/dagger.schema.json"
+    },
+    {
+      "name": "Dagger module (dagger-module.toml)",
+      "description": "Module manifest for the Dagger CI/CD engine: runtime, dependencies, and engine version",
+      "fileMatch": ["dagger-module.toml"],
+      "url": "https://docs.dagger.io/reference/dagger-module.schema.json"
+    },
+    {
+      "name": "Dagger workspace (dagger.toml)",
+      "description": "Workspace configuration for the Dagger CI/CD engine: installed modules, their settings, and SDKs",
+      "fileMatch": ["dagger.toml"],
+      "url": "https://docs.dagger.io/reference/dagger-workspace.schema.json"
+    },
+    {
       "name": "Dart Build Config (dart-build.json)",
       "description": "Configuration for Dart's build system",
       "url": "https://www.schemastore.org/dart-build.json"
@@ -2654,6 +2999,12 @@
       "url": "https://www.schemastore.org/datalogic-scan2deploy-ce.json"
     },
     {
+      "name": "datavzrd",
+      "description": "Configuration file for datavzrd, a tool to create visual and interactive HTML reports from tabular data",
+      "fileMatch": ["*.datavzrd.yaml", "*.datavzrd.yml"],
+      "url": "https://datavzrd.github.io/schema/latest/datavzrd.schema.json"
+    },
+    {
       "name": "ddev-global",
       "description": "DDEV global configuration file",
       "fileMatch": ["**/.ddev/global_config.yaml"],
@@ -2676,6 +3027,17 @@
       "description": "Draugr Saga - a declarative account of an application's security surface and the controls that must pass",
       "fileMatch": ["*.saga.yaml", "*.saga.yml", ".saga.yaml", ".saga.yml"],
       "url": "https://draugr.dev/schema/draugr.saga.schema.json"
+    },
+    {
+      "name": "Draugr Saga fragment",
+      "description": "A partial Draugr Saga - components and exclusions, merged into the descriptor that names it",
+      "fileMatch": [
+        "*.saga-fragment.yaml",
+        "*.saga-fragment.yml",
+        ".saga-fragment.yaml",
+        ".saga-fragment.yml"
+      ],
+      "url": "https://draugr.dev/schema/draugr.saga-fragment.schema.json"
     },
     {
       "name": "Deno Config (deno.json)",
@@ -2817,13 +3179,13 @@
       "name": "Dolittle Tenant Map Configuration",
       "description": "A Dolittle bounded context's tenant mapping configurations",
       "fileMatch": ["**/.dolittle/tenant-map.json"],
-      "url": "https://raw.githubusercontent.com/dolittle/DotNET.Fundamentals/master/Schemas/Tenancy.Configuration/tenant-map.json"
+      "url": "https://raw.githubusercontent.com/dolittle-obsolete/DotNET.Fundamentals/v4.10.0/Schemas/Tenancy.Configuration/tenant-map.json"
     },
     {
       "name": "Dolittle Topology",
       "description": "A Dolittle bounded context's topology",
       "fileMatch": ["**/.dolittle/topology.json"],
-      "url": "https://raw.githubusercontent.com/dolittle/DotNET.SDK/master/Schemas/Applications.Configuration/topology.json"
+      "url": "https://raw.githubusercontent.com/dolittle/DotNET.SDK/v5.0.0/Schemas/Applications.Configuration/topology.json"
     },
     {
       "name": "dotnet Release Index manifest",
@@ -2895,7 +3257,7 @@
       "fileMatch": ["devfile.yaml", ".devfile.yaml"],
       "url": "https://raw.githubusercontent.com/devfile/api/v2.2.0/schemas/latest/devfile.json",
       "versions": {
-        "1.0.0": "https://raw.githubusercontent.com/eclipse-che/che-server/master/wsmaster/che-core-api-workspace/src/main/resources/schema/1.0.0/devfile.json",
+        "1.0.0": "https://raw.githubusercontent.com/eclipse-che/che-server/7.80.0/wsmaster/che-core-api-workspace/src/main/resources/schema/1.0.0/devfile.json",
         "2.0.0": "https://raw.githubusercontent.com/devfile/api/v2.0.0/schemas/latest/devfile.json",
         "2.1.0": "https://raw.githubusercontent.com/devfile/api/v2.1.0/schemas/latest/devfile.json",
         "2.2.0": "https://raw.githubusercontent.com/devfile/api/v2.2.0/schemas/latest/devfile.json"
@@ -3373,7 +3735,7 @@
       "name": "Expo SDK",
       "description": "Expo SDK app manifest",
       "fileMatch": [],
-      "url": "https://www.schemastore.org/expo-53.0.0.json",
+      "url": "https://www.schemastore.org/expo-57.0.0.json",
       "versions": {
         "37.0.0": "https://www.schemastore.org/expo-37.0.0.json",
         "38.0.0": "https://www.schemastore.org/expo-38.0.0.json",
@@ -3384,7 +3746,11 @@
         "46.0.0": "https://www.schemastore.org/expo-46.0.0.json",
         "50.0.0": "https://www.schemastore.org/expo-50.0.0.json",
         "52.0.0": "https://www.schemastore.org/expo-52.0.0.json",
-        "53.0.0": "https://www.schemastore.org/expo-53.0.0.json"
+        "53.0.0": "https://www.schemastore.org/expo-53.0.0.json",
+        "54.0.0": "https://www.schemastore.org/expo-54.0.0.json",
+        "55.0.0": "https://www.schemastore.org/expo-55.0.0.json",
+        "56.0.0": "https://www.schemastore.org/expo-56.0.0.json",
+        "57.0.0": "https://www.schemastore.org/expo-57.0.0.json"
       }
     },
     {
@@ -3538,10 +3904,40 @@
       "url": "https://raw.githubusercontent.com/fossas/fossa-cli/master/docs/references/files/fossa-deps.schema.json"
     },
     {
+      "name": "K2F package manifest",
+      "description": "K2F (Key-to-Flow) v0.3 package manifest — page size, margins, and engine version for the ZIP document format. https://k2f.dev · https://github.com/suzheng/k2f/blob/main/docs/spec/k2f-v0.3.md",
+      "fileMatch": [],
+      "url": "https://www.schemastore.org/k2f-manifest.json"
+    },
+    {
+      "name": "K2F semantic node",
+      "description": "K2F v0.3 semantic tree node JSON (content/root.json and included content files). https://k2f.dev",
+      "fileMatch": [],
+      "url": "https://www.schemastore.org/k2f-nodes.json"
+    },
+    {
+      "name": "K2F theme",
+      "description": "K2F v0.3 role-based theme (styles/theme.json). https://k2f.dev",
+      "fileMatch": [],
+      "url": "https://www.schemastore.org/k2f-styles.json"
+    },
+    {
+      "name": "K2F signatures record",
+      "description": "K2F v0.3 Ed25519 signature record (signatures/v1.json in packed packages). https://k2f.dev",
+      "fileMatch": [],
+      "url": "https://www.schemastore.org/partial-k2f-signatures.json"
+    },
+    {
       "name": "Karakum configuration file",
       "description": "configuring Karakum, a converter of TypeScript declaration files to Kotlin declarations",
       "fileMatch": ["karakum.config.json"],
       "url": "https://raw.githubusercontent.com/karakum-team/karakum/master/karakum-schema/karakum-schema.json"
+    },
+    {
+      "name": "klin.json",
+      "description": "klin quality policy configuration",
+      "fileMatch": ["klin.json"],
+      "url": "https://raw.githubusercontent.com/brajevicm/klin/main/schemas/klin.json"
     },
     {
       "name": "Knative Functions - func.yaml",
@@ -3564,6 +3960,12 @@
       "description": "Knip JSONC configuration files",
       "fileMatch": ["knip.jsonc", ".knip.jsonc"],
       "url": "https://unpkg.com/knip@6/schema-jsonc.json"
+    },
+    {
+      "name": "Kobweb conf.yaml",
+      "description": "Configuration file for a Kobweb (Kotlin web framework) site",
+      "fileMatch": ["**/.kobweb/conf.yaml"],
+      "url": "https://raw.githubusercontent.com/varabyte/kobweb/main/schemas/kobweb-conf.schema.json"
     },
     {
       "name": "KSail",
@@ -3894,6 +4296,12 @@
       "url": "https://gitresume.co/schema/resume.schema.json"
     },
     {
+      "name": "glsec",
+      "description": "Configuration file for glsec, a security linter for GitLab CI/CD pipelines. Documentation: https://github.com/glsec/glsec#configuration-file",
+      "fileMatch": [".glsec.yml"],
+      "url": "https://raw.githubusercontent.com/glsec/glsec/main/schema/glsec.schema.json"
+    },
+    {
       "name": "Ansible Execution Environment",
       "description": "Ansible execution-environment.yml file",
       "fileMatch": ["**/execution-environment.yml"],
@@ -4079,7 +4487,7 @@
       "name": "tree-sitter grammar.json",
       "description": "tree-sitter grammar.json",
       "fileMatch": ["grammar.json"],
-      "url": "https://raw.githubusercontent.com/tree-sitter/tree-sitter/master/docs/assets/schemas/config.schema.json"
+      "url": "https://raw.githubusercontent.com/tree-sitter/tree-sitter/master/docs/src/assets/schemas/config.schema.json"
     },
     {
       "name": "Treefmt",
@@ -4176,6 +4584,12 @@
       "url": "https://www.schemastore.org/grunt-task.json"
     },
     {
+      "name": "gspot",
+      "description": "gspot settings file that selects linters and agent rules for a repository",
+      "fileMatch": ["gspot.toml"],
+      "url": "https://generativespotting.com/gspot.schema.json"
+    },
+    {
       "name": "HashiCorp Vault",
       "description": "HashiCorp's Vault configuration file",
       "fileMatch": ["vault.json", "vault.config.json"],
@@ -4186,6 +4600,18 @@
       "description": "Haxelib manifest",
       "fileMatch": ["haxelib.json"],
       "url": "https://raw.githubusercontent.com/HaxeFoundation/haxelib/master/schema.json"
+    },
+    {
+      "name": "hum",
+      "description": "Hum project process manifest",
+      "fileMatch": [
+        "hum.yaml",
+        "hum.*.yaml",
+        "*.hum.yaml",
+        "hum.yml",
+        "*.hum.yml"
+      ],
+      "url": "https://raw.githubusercontent.com/brettinternet/hum/main/hum.schema.json"
     },
     {
       "name": "Hayson",
@@ -4283,7 +4709,7 @@
       "name": "IBM Zapp document",
       "description": "IBM Z APPlication configuration file for IBM zDevOps development tools such as Z Open Editor",
       "fileMatch": ["zapp.yaml", "zapp.yml", "zapp.json"],
-      "url": "https://raw.githubusercontent.com/IBM/zopeneditor-about/main/zapp/zapp-schema-1.10.2.json",
+      "url": "https://raw.githubusercontent.com/IBM/zopeneditor-about/main/zapp/zapp-schema-1.12.0.json",
       "versions": {
         "1.0.0": "https://raw.githubusercontent.com/IBM/zopeneditor-about/main/zapp/zapp-schema-1.0.0.json",
         "1.1.0": "https://raw.githubusercontent.com/IBM/zopeneditor-about/main/zapp/zapp-schema-1.1.0.json",
@@ -4297,7 +4723,9 @@
         "1.8.0": "https://raw.githubusercontent.com/IBM/zopeneditor-about/main/zapp/zapp-schema-1.8.0.json",
         "1.9.0": "https://raw.githubusercontent.com/IBM/zopeneditor-about/main/zapp/zapp-schema-1.9.0.json",
         "1.10.0": "https://raw.githubusercontent.com/IBM/zopeneditor-about/main/zapp/zapp-schema-1.10.0.json",
-        "1.10.2": "https://raw.githubusercontent.com/IBM/zopeneditor-about/main/zapp/zapp-schema-1.10.2.json"
+        "1.10.2": "https://raw.githubusercontent.com/IBM/zopeneditor-about/main/zapp/zapp-schema-1.10.2.json",
+        "1.11.0": "https://raw.githubusercontent.com/IBM/zopeneditor-about/main/zapp/zapp-schema-1.11.0.json",
+        "1.12.0": "https://raw.githubusercontent.com/IBM/zopeneditor-about/main/zapp/zapp-schema-1.12.0.json"
       }
     },
     {
@@ -4442,6 +4870,15 @@
       }
     },
     {
+      "name": "jactionlint",
+      "description": "Configuration file for jactionlint",
+      "fileMatch": [
+        "**/.github/jactionlint.yaml",
+        "**/.github/jactionlint.yml"
+      ],
+      "url": "https://raw.githubusercontent.com/jdx/jactionlint/main/schema/jactionlint-config.json"
+    },
+    {
       "name": "Jasmine",
       "description": "jasmine JSON config file",
       "fileMatch": ["jasmine.json"],
@@ -4472,6 +4909,12 @@
       "url": "https://www.schemastore.org/jest.json"
     },
     {
+      "name": "JevGate",
+      "description": "JevGate code-review gate configuration",
+      "fileMatch": ["jevgate.toml"],
+      "url": "https://raw.githubusercontent.com/Tech-Byte-Frontier/jevgate/main/jevgate.schema.json"
+    },
+    {
       "name": "JDownloader2 crawler single-rules",
       "description": "A validating a single jdownloader2 rule",
       "fileMatch": ["*.jd2cr", "*.jd2cr.json"],
@@ -4482,6 +4925,15 @@
       "description": "A validating an array of jdownloader2 rules",
       "fileMatch": ["*.jd2mcr", "*.jd2mcr.json", "*.linkcrawlerrules.json"],
       "url": "https://raw.githubusercontent.com/sergxerj/jdownloader2-crawler-rule-json-schema/main/jd2mcr.schema.json"
+    },
+    {
+      "name": "JDX",
+      "description": "JDX (Jupiter Data eXchange) declaration for registering musical works with collective management societies",
+      "fileMatch": ["*.jdx.json"],
+      "url": "https://jdx.jupiter.ar/schema/1.0/jdx.schema.json",
+      "versions": {
+        "1.0": "https://jdx.jupiter.ar/schema/1.0/jdx.schema.json"
+      }
     },
     {
       "name": "JFrog Applications Config",
@@ -4521,8 +4973,10 @@
       "name": "JReleaser",
       "description": "JReleaser config file",
       "fileMatch": ["jreleaser.yml", "jreleaser.json"],
-      "url": "https://www.schemastore.org/jreleaser-1.25.0.json",
+      "url": "https://www.schemastore.org/jreleaser-1.27.0.json",
       "versions": {
+        "1.27.0": "https://www.schemastore.org/jreleaser-1.27.0.json",
+        "1.26.0": "https://www.schemastore.org/jreleaser-1.26.0.json",
         "1.25.0": "https://www.schemastore.org/jreleaser-1.25.0.json",
         "1.24.0": "https://www.schemastore.org/jreleaser-1.24.0.json",
         "1.23.0": "https://www.schemastore.org/jreleaser-1.23.0.json",
@@ -4585,7 +5039,7 @@
     {
       "name": "JSON-API",
       "description": "JSON API document",
-      "url": "https://jsonapi.org/schema"
+      "url": "https://raw.githubusercontent.com/json-api/json-api/v1.1/schema"
     },
     {
       "name": "JSON Document Transform",
@@ -4698,7 +5152,7 @@
       "name": "Kestra flow file",
       "description": "Kestra Flow definition file, see: kestra.io/docs/workflow-components/flow#flow-sample",
       "fileMatch": ["**/flows/*.yml"],
-      "url": "https://www.schemastore.org/kestra-0.19.0.json",
+      "url": "https://api.kestra.io/v1/plugins/schemas/flow",
       "versions": {
         "0.18.0": "https://www.schemastore.org/kestra-0.18.0.json",
         "0.18.1": "https://www.schemastore.org/kestra-0.18.1.json",
@@ -4807,6 +5261,28 @@
       "url": "https://www.schemastore.org/kustomization.json"
     },
     {
+      "name": "replacement-transformer.yaml",
+      "description": "Configuration file for the Kustomize ReplacementTransformer built-in, referenced from the transformers field of a kustomization.yaml file",
+      "fileMatch": [
+        "replacement-transformer.yaml",
+        "replacement-transformer.yml",
+        "replacementtransformer.yaml",
+        "replacementtransformer.yml"
+      ],
+      "url": "https://www.schemastore.org/replacement-transformer.json"
+    },
+    {
+      "name": "value-add-transformer.yaml",
+      "description": "Configuration file for the Kustomize ValueAddTransformer built-in, referenced from the transformers field of a kustomization.yaml file",
+      "fileMatch": [
+        "value-add-transformer.yaml",
+        "value-add-transformer.yml",
+        "valueaddtransformer.yaml",
+        "valueaddtransformer.yml"
+      ],
+      "url": "https://www.schemastore.org/value-add-transformer.json"
+    },
+    {
       "name": "label-commenter-config.yml",
       "description": "A the configuration of the Label Commenter GitHub Action",
       "fileMatch": ["**/.github/label-commenter-config.yml"],
@@ -4903,6 +5379,30 @@
       "url": "https://w3id.org/linkml/meta.schema.json"
     },
     {
+      "name": "LiquiLens Evidence Carrier v1",
+      "description": "Transport-neutral, content-addressed financial evidence carrier",
+      "fileMatch": [
+        "liquilens-evidence-carrier.json",
+        "*.liquilens-evidence-carrier.json"
+      ],
+      "url": "https://liquilens.in/protocol/liquilens-evidence-carrier-v1.schema.json"
+    },
+    {
+      "name": "LiquiLens Evidence Carrier Reference v1",
+      "description": "Policy-redacted reference to a verified LiquiLens Evidence Carrier",
+      "fileMatch": [
+        "liquilens-evidence-carrier-reference.json",
+        "*.liquilens-evidence-carrier-reference.json"
+      ],
+      "url": "https://liquilens.in/protocol/liquilens-evidence-carrier-reference-v1.schema.json"
+    },
+    {
+      "name": "litertlm_manifest.json",
+      "description": "Deployment manifest for Hugging Face model repos that ship .litertlm bundles for the LiteRT-LM runtime: per-device file selection, verified backends, requirements, and measured performance",
+      "fileMatch": ["litertlm_manifest.json"],
+      "url": "https://www.schemastore.org/litertlm_manifest.json"
+    },
+    {
       "name": "Lively Properties",
       "description": "Lively Wallpaper configuration file. Documentation: https://github.com/rocksdanister/lively/wiki/Web-Guide-IV-:-Interaction#lively-properties",
       "fileMatch": ["LivelyProperties.json"],
@@ -4939,6 +5439,12 @@
       "url": "https://www.schemastore.org/lsdlschema.json"
     },
     {
+      "name": ".luarc.json",
+      "description": "Lua language server (LuaLS) settings file. Documentation: https://luals.github.io/wiki/settings/",
+      "fileMatch": [".luarc.json", ".luarc.jsonc"],
+      "url": "https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json"
+    },
+    {
       "name": ".luaurc",
       "description": "Luau language configuration file",
       "fileMatch": [".luaurc"],
@@ -4968,10 +5474,56 @@
       "url": "https://www.schemastore.org/maestro-flow.json"
     },
     {
+      "name": "Mandrel Agent Spec",
+      "description": "Declarative contract for autonomous AI agent governance (Mandrel Spec source contract)",
+      "fileMatch": [
+        "mandrel.yaml",
+        "mandrel.yml",
+        "*.mandrel.yaml",
+        "*.mandrel.yml",
+        "mandrel-spec.yaml",
+        "mandrel-spec.yml",
+        "*.mandrel-spec.yaml",
+        "*.mandrel-spec.yml"
+      ],
+      "url": "https://mandrelproject.ai/v1/mandrel-spec.schema.json"
+    },
+    {
+      "name": "Mandrel Realized Spec",
+      "description": "Baked and signed declarative contract for autonomous AI agent runtime enforcement (Mandrel Realized Spec)",
+      "fileMatch": [
+        "realized-spec.yaml",
+        "realized-spec.yml",
+        "*.realized-spec.yaml",
+        "*.realized-spec.yml",
+        "*.realized.yaml",
+        "*.realized.yml"
+      ],
+      "url": "https://mandrelproject.ai/v1/mandrel-realized-spec.schema.json"
+    },
+    {
+      "name": "mapcan",
+      "description": "mapcan CAN signal map: buses, devices, frames and signals (CAN, CAN FD, CANopen, SAE J1939)",
+      "fileMatch": ["*.mapcan.yaml", "*.mapcan.yml"],
+      "url": "https://ordu1453.github.io/mapcan/schema/v1.json"
+    },
+    {
       "name": "MapEHR Mapping",
       "description": "Mapping for MapEHR.com",
       "fileMatch": [".map.yml", ".map.yaml", ".map.json"],
       "url": "https://www.schemastore.org/mapehr.json"
+    },
+    {
+      "name": "mcdreforged.plugin.json",
+      "description": "MCDReforged multi-file plugin metadata file",
+      "fileMatch": ["mcdreforged.plugin.json"],
+      "url": "https://raw.githubusercontent.com/MCDReforged/schema/master/schemas/mcdreforged-plugin-metadata.json"
+    },
+    {
+      "name": "mcdreforged.linked_directory_plugin.json",
+      "description": "MCDReforged linked directory plugin configuration file",
+      "fileMatch": ["mcdreforged.linked_directory_plugin.json"],
+      "url": "https://raw.githubusercontent.com/MCDReforged/schema/master/schemas/mcdreforged-link-directory-plugin.json"
     },
     {
       "name": "A micro editor config",
@@ -4984,23 +5536,33 @@
       "description": "Mega-Linter configuration file (for Mega-Linter users)",
       "fileMatch": [
         ".mega-linter.yml",
+        ".mega-linter.yaml",
         ".megalinter.yml",
+        ".megalinter.yaml",
         "*.mega-linter-config.yml",
-        "*.megalinter-config.yml"
+        "*.megalinter-config.yml",
+        "**/.config/mega-linter.yml",
+        "**/.config/mega-linter.yaml",
+        "**/.config/.mega-linter.yml",
+        "**/.config/.mega-linter.yaml",
+        "**/.config/megalinter.yml",
+        "**/.config/megalinter.yaml",
+        "**/.config/.megalinter.yml",
+        "**/.config/.megalinter.yaml"
       ],
-      "url": "https://raw.githubusercontent.com/megalinter/megalinter/main/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json"
+      "url": "https://raw.githubusercontent.com/oxsecurity/megalinter/main/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json"
     },
     {
       "name": "MegaLinter Custom Flavor",
       "description": "MegaLinter Custom Flavor definition file",
       "fileMatch": ["megalinter-custom-flavor.yml"],
-      "url": "https://raw.githubusercontent.com/megalinter/megalinter/main/megalinter/descriptors/schemas/megalinter-custom-flavor.jsonschema.json"
+      "url": "https://raw.githubusercontent.com/oxsecurity/megalinter/main/megalinter/descriptors/schemas/megalinter-custom-flavor.jsonschema.json"
     },
     {
       "name": "MegaLinter descriptor",
       "description": "MegaLinter descriptor files (for MegaLinter contributors)",
       "fileMatch": ["*.megalinter-descriptor.yml"],
-      "url": "https://raw.githubusercontent.com/megalinter/megalinter/main/megalinter/descriptors/schemas/megalinter-descriptor.jsonschema.json"
+      "url": "https://raw.githubusercontent.com/oxsecurity/megalinter/main/megalinter/descriptors/schemas/megalinter-descriptor.jsonschema.json"
     },
     {
       "name": "Meltano project definition",
@@ -5241,6 +5803,12 @@
       "url": "https://www.schemastore.org/modelsdev.json"
     },
     {
+      "name": "modlab-last-run.json",
+      "description": "ModLab Mindustry homing lab single-run log (Universal Modder worked example)",
+      "fileMatch": ["modlab-last-run.json"],
+      "url": "https://modlabguides.online/schemas/modlab-mindustry-run-log-v1.schema.json"
+    },
+    {
       "name": "monospace.yml",
       "description": "MonoSpace configuration file",
       "fileMatch": ["monospace.yml"],
@@ -5282,10 +5850,13 @@
       "description": "Mergify configuration file",
       "fileMatch": [
         ".mergify.yml",
+        ".mergify.yaml",
         "**/.github/mergify.yml",
-        "**/.mergify/config.yml"
+        "**/.github/mergify.yaml",
+        "**/.mergify/config.yml",
+        "**/.mergify/config.yaml"
       ],
-      "url": "https://raw.githubusercontent.com/Mergifyio/docs/main/public/mergify-configuration-schema.json"
+      "url": "https://docs.mergify.com/mergify-configuration-schema.json"
     },
     {
       "name": ".mocharc",
@@ -5315,6 +5886,18 @@
       "description": "mycode.js files",
       "fileMatch": ["mycode.json"],
       "url": "https://www.schemastore.org/mycode.json"
+    },
+    {
+      "name": "myks",
+      "description": "myks project configuration file",
+      "fileMatch": [".myks.yaml", ".myks.yml"],
+      "url": "https://raw.githubusercontent.com/mykso/myks/main/schema/myks.schema.json"
+    },
+    {
+      "name": "Nais manifests",
+      "description": "Nais manifest files",
+      "fileMatch": ["nais.yaml", "**/.nais/*.yaml"],
+      "url": "https://schemas.nais.io/editor.json"
     },
     {
       "name": "napari plugin manifest",
@@ -5409,7 +5992,7 @@
     },
     {
       "name": "nest-cli",
-      "description": "A progressive Node.js framework for building efficient and scalable server-side applications 🚀",
+      "description": "A progressive Node.js framework for building efficient and scalable server-side applications \ud83d\ude80",
       "fileMatch": [
         ".nestcli.json",
         ".nest-cli.json",
@@ -5432,7 +6015,7 @@
     },
     {
       "name": "Nika workflow",
-      "description": "Nika workflow language (*.nika.yaml) · the nika: v1 envelope, four verbs, stdlib builtins",
+      "description": "Nika workflow language (*.nika.yaml) \u00b7 the nika: v1 envelope, four verbs, stdlib builtins",
       "fileMatch": ["*.nika.yaml", "*.nika.yml"],
       "url": "https://raw.githubusercontent.com/supernovae-st/nika-spec/main/schemas/workflow.schema.json"
     },
@@ -5699,8 +6282,9 @@
         "otel-sdk*.yaml",
         "otel-sdk*.yml"
       ],
-      "url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-configuration/refs/tags/v1.1.0/opentelemetry_configuration.json",
+      "url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-configuration/refs/tags/v1.2.0/opentelemetry_configuration.json",
       "versions": {
+        "1.2.0": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-configuration/refs/tags/v1.2.0/opentelemetry_configuration.json",
         "1.1.0": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-configuration/refs/tags/v1.1.0/opentelemetry_configuration.json",
         "1.0.0": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-configuration/refs/tags/v1.0.0/opentelemetry_configuration.json"
       }
@@ -5915,6 +6499,36 @@
       }
     },
     {
+      "name": "OSD device descriptor",
+      "description": "Open Synth Descriptors: how a synthesizer, drum machine, controller or music software speaks MIDI or OSC (https://github.com/roomi-fields/open-synth-descriptors)",
+      "url": "https://w3id.org/osd/0.5/device.schema.json",
+      "versions": {
+        "0.5": "https://w3id.org/osd/0.5/device.schema.json",
+        "0.4": "https://w3id.org/osd/0.4/device.schema.json"
+      }
+    },
+    {
+      "name": "OSD fingerprint",
+      "description": "Open Synth Descriptors: how a music device is recognised",
+      "url": "https://w3id.org/osd/0.5/fingerprint.schema.json"
+    },
+    {
+      "name": "OSD firmware descriptor",
+      "description": "Open Synth Descriptors: what a firmware changes on a music device",
+      "url": "https://w3id.org/osd/0.5/firmware.schema.json"
+    },
+    {
+      "name": "OSD maker profile",
+      "description": "Open Synth Descriptors: what a maker's music devices share",
+      "url": "https://w3id.org/osd/0.5/profile.schema.json"
+    },
+    {
+      "name": "OSD sound descriptor",
+      "description": "Open Synth Descriptors: a shared sound for a music device, its author and licence",
+      "fileMatch": ["*.osd.json"],
+      "url": "https://w3id.org/osd/0.5/sound.schema.json"
+    },
+    {
       "name": "OSS Review Toolkit configuration",
       "description": "ORT's main configuration file",
       "fileMatch": ["**/.ort/config/config.yml", "**/.ort/config/config.yaml"],
@@ -6030,6 +6644,21 @@
       "description": "Configuration for pgrls, the Postgres Row-Level Security linter (pgrls.toml)",
       "fileMatch": ["pgrls.toml"],
       "url": "https://www.schemastore.org/pgrls.json"
+    },
+    {
+      "name": "phenix",
+      "description": "Config files for the phenix cyber-physical orchestration framework. See https://phenix.sceptre.dev/latest/ for documentation",
+      "fileMatch": [
+        "**/phenix-configs/**/*.yml",
+        "**/phenix-configs/**/*.yaml",
+        "**/phenix-images/*.yml",
+        "**/phenix-images/*.yaml",
+        "**/sceptre-phenix-topologies/**/*.yml",
+        "**/sceptre-phenix-topologies/**/*.yaml",
+        "phenix.yml",
+        ".phenix.yml"
+      ],
+      "url": "https://raw.githubusercontent.com/sandialabs/sceptre-phenix/main/schemas/phenix.schema.json"
     },
     {
       "name": "pattern.json",
@@ -6373,6 +7002,17 @@
       "url": "https://www.schemastore.org/prometheus-alertmanager.json"
     },
     {
+      "name": "Promtail",
+      "description": "An agent which ships the contents of local logs to a private Grafana Loki instance or Grafana Cloud",
+      "fileMatch": [
+        "promtail.yaml",
+        "promtail.yml",
+        "promtail-config.yaml",
+        "promtail-config.yml"
+      ],
+      "url": "https://www.schemastore.org/promtail.json"
+    },
+    {
       "name": "proxies.json",
       "description": "Azure Function Proxies proxies.json files",
       "fileMatch": ["proxies.json"],
@@ -6402,7 +7042,7 @@
     },
     {
       "name": ".putout.json",
-      "description": "🐊Putout configuration file",
+      "description": "\ud83d\udc0aPutout configuration file",
       "fileMatch": [".putout.json"],
       "url": "https://www.schemastore.org/putout.json"
     },
@@ -6430,12 +7070,8 @@
     {
       "name": "Rancher Fleet",
       "description": "Rancher Fleet fleet.yaml configuration file",
-      "fileMatch": ["fleet.yaml"],
-      "url": "https://www.schemastore.org/rancher-fleet-0.8.json",
-      "versions": {
-        "0.5": "https://www.schemastore.org/rancher-fleet-0.5.json",
-        "0.8": "https://www.schemastore.org/rancher-fleet-0.8.json"
-      }
+      "fileMatch": ["**/fleet.yaml"],
+      "url": "https://raw.githubusercontent.com/rancher/fleet/main/schemas/fleet.yaml.json"
     },
     {
       "name": "config.yaml",
@@ -6579,6 +7215,11 @@
       "url": "https://www.schemastore.org/rehyperc.json"
     },
     {
+      "name": "Reinigungsplan",
+      "description": "Structured cleaning plans with areas, services, recurrence, responsibilities and quality criteria",
+      "url": "https://xn--jonas-gebudereinigung-e2b.de/wp-content/uploads/2026/08/reinigungsplan-schema-1.0.0.json"
+    },
+    {
       "name": "release-please-config.json",
       "description": "Release Please manifest configuration file",
       "fileMatch": ["release-please-config.json"],
@@ -6595,6 +7236,12 @@
       "description": "Release-plz configuration file",
       "fileMatch": ["release-plz.toml", ".release-plz.toml"],
       "url": "https://raw.githubusercontent.com/MarcoIeni/release-plz/main/.schema/latest.json"
+    },
+    {
+      "name": "relwolf",
+      "description": "relwolf release bot configuration file for GitLab and GitHub",
+      "fileMatch": ["relwolf.yaml", "relwolf.yml"],
+      "url": "https://relwolf.lupiq.io/schema.json"
     },
     {
       "name": ".remarkrc",
@@ -6617,19 +7264,25 @@
       "name": "github-settings-as-code",
       "description": "Declarative GitHub repository settings applied by the github-settings-as-code action; accepts Probot Settings app files as-is. Documentation: https://github.com/Vivswan/github-settings-as-code",
       "fileMatch": ["**/.github/settings.yml"],
-      "url": "https://raw.githubusercontent.com/Vivswan/github-settings-as-code/main/lib/settings.schema.json"
+      "url": "https://github.com/Vivswan/github-settings-as-code/releases/latest/download/settings.schema.json"
     },
     {
-      "name": "reposets Configuration",
+      "name": "reposets.config.toml",
       "description": "Configuration for the reposets CLI tool for syncing GitHub repository settings",
       "fileMatch": ["reposets.config.toml", "reposets.config.json"],
-      "url": "https://raw.githubusercontent.com/spencerbeggs/reposets/main/package/schemas/reposets.config.schema.json"
+      "url": "https://raw.githubusercontent.com/spencerbeggs/reposets/main/schemas/3.0/config.json",
+      "versions": {
+        "3.0": "https://raw.githubusercontent.com/spencerbeggs/reposets/main/schemas/3.0/config.json"
+      }
     },
     {
-      "name": "reposets Credentials",
+      "name": "reposets.credentials.toml",
       "description": "Authentication profiles for the reposets CLI tool",
       "fileMatch": ["reposets.credentials.toml", "reposets.credentials.json"],
-      "url": "https://raw.githubusercontent.com/spencerbeggs/reposets/main/package/schemas/reposets.credentials.schema.json"
+      "url": "https://raw.githubusercontent.com/spencerbeggs/reposets/main/schemas/3.0/credentials.json",
+      "versions": {
+        "3.0": "https://raw.githubusercontent.com/spencerbeggs/reposets/main/schemas/3.0/credentials.json"
+      }
     },
     {
       "name": "*.resjson",
@@ -6657,7 +7310,7 @@
     },
     {
       "name": "JSON Resume",
-      "description": "JSON résumé files",
+      "description": "JSON r\u00e9sum\u00e9 files",
       "fileMatch": [
         "**/resume.json",
         "**/*.resume.json",
@@ -6923,28 +7576,31 @@
     {
       "name": "SDMX structure message",
       "description": "Statistical Data and Metadata eXchange (ISO 17369) structure message",
-      "url": "https://raw.githubusercontent.com/sdmx-twg/sdmx-json/master/structure-message/tools/schemas/2.0.0/sdmx-json-structure-schema.json",
+      "url": "https://json.sdmx.org/2.1/sdmx-json-structure-schema.json",
       "versions": {
-        "1.0": "https://raw.githubusercontent.com/sdmx-twg/sdmx-json/master/structure-message/tools/schemas/1.0/sdmx-json-structure-schema.json",
-        "2.0.0": "https://raw.githubusercontent.com/sdmx-twg/sdmx-json/master/structure-message/tools/schemas/2.0.0/sdmx-json-structure-schema.json"
+        "1.0": "https://json.sdmx.org/1.0/sdmx-json-structure-schema.json",
+        "2.0.0": "https://json.sdmx.org/2.0.0/sdmx-json-structure-schema.json",
+        "2.1": "https://json.sdmx.org/2.1/sdmx-json-structure-schema.json"
       }
     },
     {
       "name": "SDMX metadata message",
       "description": "Statistical Data and Metadata eXchange (ISO 17369) metadata message",
-      "url": "https://raw.githubusercontent.com/sdmx-twg/sdmx-json/master/metadata-message/tools/schemas/2.0.0/sdmx-json-metadata-schema.json",
+      "url": "https://json.sdmx.org/2.1/sdmx-json-metadata-schema.json",
       "versions": {
-        "1.0": "https://raw.githubusercontent.com/sdmx-twg/sdmx-json/master/metadata-message/tools/schemas/1.0/sdmx-json-metadata-schema.json",
-        "2.0.0": "https://raw.githubusercontent.com/sdmx-twg/sdmx-json/master/metadata-message/tools/schemas/2.0.0/sdmx-json-metadata-schema.json"
+        "1.0": "https://json.sdmx.org/1.0/sdmx-json-metadata-schema.json",
+        "2.0.0": "https://json.sdmx.org/2.0.0/sdmx-json-metadata-schema.json",
+        "2.1": "https://json.sdmx.org/2.1/sdmx-json-metadata-schema.json"
       }
     },
     {
       "name": "SDMX data message",
       "description": "Statistical Data and Metadata eXchange (ISO 17369) data message",
-      "url": "https://raw.githubusercontent.com/sdmx-twg/sdmx-json/master/data-message/tools/schemas/2.0.0/sdmx-json-data-schema.json",
+      "url": "https://json.sdmx.org/2.1/sdmx-json-data-schema.json",
       "versions": {
-        "1.0": "https://raw.githubusercontent.com/sdmx-twg/sdmx-json/master/data-message/tools/schemas/1.0/sdmx-json-data-schema.json",
-        "2.0.0": "https://raw.githubusercontent.com/sdmx-twg/sdmx-json/master/data-message/tools/schemas/2.0.0/sdmx-json-data-schema.json"
+        "1.0": "https://json.sdmx.org/1.0/sdmx-json-data-schema.json",
+        "2.0.0": "https://json.sdmx.org/2.0.0/sdmx-json-data-schema.json",
+        "2.1": "https://json.sdmx.org/2.1/sdmx-json-data-schema.json"
       }
     },
     {
@@ -7023,6 +7679,12 @@
       "description": "Serenity code generator (sergen) configuration file",
       "fileMatch": ["sergen.json", "sergen.*.json", "*.sergen.json"],
       "url": "https://www.schemastore.org/sergen.json"
+    },
+    {
+      "name": "serve.json",
+      "description": "Configuration file for Vercel's serve static file server",
+      "fileMatch": ["vercel.serve.json"],
+      "url": "https://www.schemastore.org/serve.json"
     },
     {
       "name": "settings.job",
@@ -7172,6 +7834,12 @@
       "description": "Source Map files version 3",
       "fileMatch": ["*.map"],
       "url": "https://www.schemastore.org/sourcemap-v3.json"
+    },
+    {
+      "name": "sourceledger sources.toml",
+      "description": "Manifest of the public sources a sourceledger dataset is built from",
+      "fileMatch": [],
+      "url": "https://raw.githubusercontent.com/simonvanlierde/sourceledger/main/src/sourceledger/sources.schema.json"
     },
     {
       "name": "Sourcery",
@@ -7389,6 +8057,12 @@
       "url": "https://www.schemastore.org/stale.json"
     },
     {
+      "name": "stamp policy",
+      "description": "Merge-gate policy for stamp, the approve-first PR reviewer. Documentation: https://github.com/jagreehal/stamp",
+      "fileMatch": ["**/.stamp/policy.yml"],
+      "url": "https://cdn.jsdelivr.net/npm/@jagreehal/stamp/.stamp/policy.schema.json"
+    },
+    {
       "name": "Starfish",
       "description": "Configuration file for Starfish",
       "fileMatch": ["starfish.yml"],
@@ -7457,6 +8131,16 @@
       "url": "https://www.schemastore.org/stylelintrc.json"
     },
     {
+      "name": "Supabase CLI config",
+      "description": "Configuration file for the Supabase CLI",
+      "fileMatch": [
+        "**/supabase/config.toml",
+        "**/supabase/config.json",
+        "**/supabase/config.jsonc"
+      ],
+      "url": "https://supabase.com/schemas/config/v1.json"
+    },
+    {
       "name": "SWADL",
       "description": "Symphony Workflow Automation Definition Language. Documentation: https://developers.symphony.com/",
       "fileMatch": ["*.swadl.yaml", "*.swadl.yml"],
@@ -7469,6 +8153,30 @@
       "url": "https://spec.openapis.org/oas/2.0/schema/2017-08-27"
     },
     {
+      "name": "Symfony Routing Configuration",
+      "description": "Symfony routing configuration file (config/routes)",
+      "fileMatch": ["**/config/routes.yaml", "**/config/routes/**/*.yaml"],
+      "url": "https://raw.githubusercontent.com/symfony/symfony/8.1/src/Symfony/Component/Routing/Loader/schema/routing.schema.json"
+    },
+    {
+      "name": "Symfony Serializer Mapping",
+      "description": "Symfony serializer mapping configuration file",
+      "fileMatch": ["**/config/serializer/**/*.yaml"],
+      "url": "https://raw.githubusercontent.com/symfony/symfony/8.1/src/Symfony/Component/Serializer/Mapping/Loader/schema/serialization.schema.json"
+    },
+    {
+      "name": "Symfony Services Configuration",
+      "description": "Symfony parameters and services configuration file (config/services)",
+      "fileMatch": ["**/config/services.yaml", "**/config/services_*.yaml"],
+      "url": "https://raw.githubusercontent.com/symfony/symfony/8.1/src/Symfony/Component/DependencyInjection/Loader/schema/services.schema.json"
+    },
+    {
+      "name": "Symfony Validation Mapping",
+      "description": "Symfony validation mapping configuration file",
+      "fileMatch": ["**/config/validator/**/*.yaml"],
+      "url": "https://raw.githubusercontent.com/symfony/symfony/8.1/src/Symfony/Component/Validator/Mapping/Loader/schema/validation.schema.json"
+    },
+    {
       "name": "Synadia Connect Component",
       "description": "Synadia Connect component definition",
       "fileMatch": [
@@ -7476,7 +8184,7 @@
         "**/.connect/sources/*.yml",
         "**/.connect/sinks/*.yml"
       ],
-      "url": "https://raw.githubusercontent.com/synadia-io/connect/main/schemas/component.json"
+      "url": "https://raw.githubusercontent.com/synadia-io/connect/b647c6bc4448f7790c5a97ce39daae405ead0f0a/schemas/component.json"
     },
     {
       "name": "Tach",
@@ -7533,6 +8241,36 @@
       "url": "https://www.schemastore.org/templatesources.json"
     },
     {
+      "name": "Terraform PowerShell provider block manifest",
+      "description": "Custom provider-block attributes of a Terraform provider built on terraform-provider-powershell",
+      "fileMatch": ["provider.tfps.json", "**/provider.tfps.json"],
+      "url": "https://www.schemastore.org/tfpowershell-provider.json"
+    },
+    {
+      "name": "Terraform PowerShell provider data source manifest",
+      "description": "Typed attribute declarations for one data source in a Terraform provider built on terraform-provider-powershell",
+      "fileMatch": ["datasource.tfps.json", "**/datasource.tfps.json"],
+      "url": "https://www.schemastore.org/tfpowershell-datasource.json"
+    },
+    {
+      "name": "Terraform PowerShell provider resource manifest",
+      "description": "Typed attribute declarations for one resource in a Terraform provider built on terraform-provider-powershell",
+      "fileMatch": ["resource.tfps.json", "**/resource.tfps.json"],
+      "url": "https://www.schemastore.org/tfpowershell-resource.json"
+    },
+    {
+      "name": "Terraform PowerShell provider settings",
+      "description": "Name and registry address of a Terraform provider built on terraform-provider-powershell",
+      "fileMatch": ["settings.tfps.json", "**/settings.tfps.json"],
+      "url": "https://www.schemastore.org/tfpowershell-settings.json"
+    },
+    {
+      "name": "Tesseract configuration",
+      "description": "Configuration file for a Tesseract (tesseract_config.yaml)",
+      "fileMatch": ["tesseract_config.yaml", "tesseract_config.yml"],
+      "url": "https://docs.pasteurlabs.ai/projects/tesseract-core/stable/tesseract_config.schema.json"
+    },
+    {
       "name": "Tier.run pricing.json",
       "description": "Tier.run pricing model configuration",
       "fileMatch": ["pricing.json"],
@@ -7574,7 +8312,7 @@
     },
     {
       "name": "Tombi",
-      "description": "Tombi (鳶) is a toolkit for TOML; providing a formatter/linter and language server",
+      "description": "Tombi (\u9cf6) is a toolkit for TOML; providing a formatter/linter and language server",
       "fileMatch": ["tombi.toml", "**/tombi/config.toml"],
       "url": "https://www.schemastore.org/tombi.json"
     },
@@ -7600,6 +8338,12 @@
       "description": "Visual Studio's test environment config",
       "fileMatch": ["testEnvironments.json"],
       "url": "https://www.schemastore.org/testenvironments.json"
+    },
+    {
+      "name": "tempo.json",
+      "description": "Unreal Engine modding tool, that covers project management, automated builds, and more",
+      "fileMatch": ["**/*tempo.json"],
+      "url": "https://raw.githubusercontent.com/Tempo-Organization/tempo-cli/refs/heads/gh-pages/schema/latest/tempo.schema.json"
     },
     {
       "name": "Turborepo",
@@ -7654,7 +8398,7 @@
     },
     {
       "name": "TrueScript for *.tscript files",
-      "description": "The Ultimate Script Language for monday.com - © 2024 MakeITSimple",
+      "description": "The Ultimate Script Language for monday.com - \u00a9 2024 MakeITSimple",
       "fileMatch": ["*.tscript", "*.tscript.yaml", "*.tscript.yml"],
       "url": "https://www.schemastore.org/truescript.json",
       "versions": {
@@ -7728,6 +8472,22 @@
       "url": "https://cdn.jsdelivr.net/npm/tsup/schema.json"
     },
     {
+      "name": "ttheme marketplace",
+      "description": "Marketplace file of ttheme, which names a repository of terminal palettes",
+      "fileMatch": ["ttheme-marketplace.toml"],
+      "url": "https://www.schemastore.org/ttheme-marketplace.json"
+    },
+    {
+      "name": "ttheme palette",
+      "description": "Terminal palette file of ttheme",
+      "url": "https://www.schemastore.org/ttheme-palette.json"
+    },
+    {
+      "name": "ttheme work",
+      "description": "Work file of ttheme: a work and its characters, which terminal palettes are of",
+      "url": "https://www.schemastore.org/ttheme-work.json"
+    },
+    {
       "name": "tusk.yml",
       "description": "tusk CLI configuration file",
       "fileMatch": ["tusk.yml", "tusk.yaml"],
@@ -7737,19 +8497,13 @@
       "name": "twee-ts",
       "description": "twee-ts compiler configuration file",
       "fileMatch": ["twee-ts.config.json"],
-      "url": "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/twee-ts.config.json"
+      "url": "https://unpkg.com/@rohal12/twee-ts/schemas/twee-ts.config.schema.json"
     },
     {
       "name": "typewiz.json",
       "description": "Typewiz configuration file",
       "fileMatch": ["typewiz.json"],
       "url": "https://www.schemastore.org/typewiz.json"
-    },
-    {
-      "name": "typo3.json",
-      "description": "the Typo3 CMS",
-      "fileMatch": ["**/sites/*/config.yaml", "**/sites/*/config.yml"],
-      "url": "https://www.schemastore.org/typo3.json"
     },
     {
       "name": "TYPO3 Vendor Bundler config",
@@ -7760,6 +8514,60 @@
         "typo3-vendor-bundler.yml"
       ],
       "url": "https://raw.githubusercontent.com/eliashaeussler/typo3-vendor-bundler/refs/heads/main/res/typo3-vendor-bundler.schema.json"
+    },
+    {
+      "name": "TYPO3 site configuration",
+      "description": "TYPO3 CMS site configuration in config/sites/<identifier>/config.yaml",
+      "fileMatch": ["**/sites/*/config.yaml", "**/sites/*/config.yml"],
+      "url": "https://www.schemastore.org/typo3.json"
+    },
+    {
+      "name": "TYPO3 site CSP configuration",
+      "description": "TYPO3 CMS Content Security Policy of a site in config/sites/<identifier>/csp.yaml",
+      "fileMatch": ["**/sites/*/csp.yaml"],
+      "url": "https://www.schemastore.org/typo3-site-csp.json"
+    },
+    {
+      "name": "TYPO3 site set",
+      "description": "TYPO3 CMS site set definition in Configuration/Sets/<SetFolder>/config.yaml",
+      "fileMatch": ["**/Configuration/Sets/*/config.yaml"],
+      "url": "https://www.schemastore.org/typo3-set-config.json"
+    },
+    {
+      "name": "TYPO3 site set settings definitions",
+      "description": "TYPO3 CMS settings definitions of a site set in Configuration/Sets/<SetFolder>/settings.definitions.yaml",
+      "fileMatch": ["**/Configuration/Sets/*/settings.definitions.yaml"],
+      "url": "https://www.schemastore.org/typo3-set-settings-definitions.json"
+    },
+    {
+      "name": "TYPO3 site set route enhancers",
+      "description": "TYPO3 CMS route enhancers of a site set in Configuration/Sets/<SetFolder>/route-enhancers.yaml",
+      "fileMatch": ["**/Configuration/Sets/*/route-enhancers.yaml"],
+      "url": "https://www.schemastore.org/typo3-set-route-enhancers.json"
+    },
+    {
+      "name": "TYPO3 file storages",
+      "description": "TYPO3 CMS file storage configuration in config/system/file-storages.yaml",
+      "fileMatch": ["**/config/system/file-storages.yaml"],
+      "url": "https://www.schemastore.org/typo3-file-storages.json"
+    },
+    {
+      "name": "TYPO3 CKEditor preset",
+      "description": "TYPO3 CMS rich text editor (CKEditor) preset in Configuration/RTE/<Name>.yaml",
+      "fileMatch": ["**/Configuration/RTE/*.yaml"],
+      "url": "https://www.schemastore.org/typo3-rte-preset.json"
+    },
+    {
+      "name": "TYPO3 form definition",
+      "description": "TYPO3 CMS form definition (*.form.yaml)",
+      "fileMatch": ["*.form.yaml"],
+      "url": "https://www.schemastore.org/typo3-form-definition.json"
+    },
+    {
+      "name": "TYPO3 form set",
+      "description": "TYPO3 CMS form framework configuration in Configuration/Form/<SetFolder>/config.yaml",
+      "fileMatch": ["**/Configuration/Form/*/config.yaml"],
+      "url": "https://www.schemastore.org/typo3-form-config.json"
     },
     {
       "name": "typos.toml",
@@ -7886,69 +8694,392 @@
       "url": "https://www.schemastore.org/vector.json"
     },
     {
+      "name": "Vee JSON menu output",
+      "description": "Structured JSON printed by a Vee menu-bar plugin, the alternative to the xbar/SwiftBar text protocol",
+      "url": "https://vee.navbytes.io/schemas/json-output.schema.json"
+    },
+    {
       "name": "vega.json",
       "description": "Vega visualization specification file",
       "fileMatch": ["*.vg", "*.vg.json"],
-      "url": "https://www.schemastore.org/vega.json"
+      "url": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v6.4.0.json",
+      "versions": {
+        "v2.0.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v2.0.0.json",
+        "v2.0.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v2.0.1.json",
+        "v2.0.3": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v2.0.3.json",
+        "v2.0.4": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v2.0.4.json",
+        "v2.0.5": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v2.0.5.json",
+        "v2.0.6": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v2.0.6.json",
+        "v2.1.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v2.1.0.json",
+        "v2.1.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v2.1.1.json",
+        "v2.1.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v2.1.2.json",
+        "v2.2.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v2.2.0.json",
+        "v2.2.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v2.2.1.json",
+        "v2.2.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v2.2.2.json",
+        "v2.2.3": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v2.2.3.json",
+        "v2.2.4": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v2.2.4.json",
+        "v2.2.5": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v2.2.5.json",
+        "v2.2.6": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v2.2.6.json",
+        "v2.3.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v2.3.0.json",
+        "v2.3.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v2.3.1.json",
+        "v2.4.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v2.4.0.json",
+        "v2.4.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v2.4.1.json",
+        "v2.4.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v2.4.2.json",
+        "v2.5.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v2.5.0.json",
+        "v2.5.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v2.5.1.json",
+        "v2.5.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v2.5.2.json",
+        "v2.6.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v2.6.0.json",
+        "v2.6.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v2.6.1.json",
+        "v2.6.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v2.6.2.json",
+        "v2.6.3": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v2.6.3.json",
+        "v2.6.4": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v2.6.4.json",
+        "v2.6.5": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v2.6.5.json",
+        "v3.0.0-beta.14": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-beta.14.json",
+        "v3.0.0-beta.15": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-beta.15.json",
+        "v3.0.0-beta.16": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-beta.16.json",
+        "v3.0.0-beta.17": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-beta.17.json",
+        "v3.0.0-beta.18": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-beta.18.json",
+        "v3.0.0-beta.19": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-beta.19.json",
+        "v3.0.0-beta.20": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-beta.20.json",
+        "v3.0.0-beta.21": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-beta.21.json",
+        "v3.0.0-beta.22": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-beta.22.json",
+        "v3.0.0-beta.23": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-beta.23.json",
+        "v3.0.0-beta.24": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-beta.24.json",
+        "v3.0.0-beta.25": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-beta.25.json",
+        "v3.0.0-beta.26": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-beta.26.json",
+        "v3.0.0-beta.27": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-beta.27.json",
+        "v3.0.0-beta.28": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-beta.28.json",
+        "v3.0.0-beta.29": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-beta.29.json",
+        "v3.0.0-beta.30": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-beta.30.json",
+        "v3.0.0-beta.31": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-beta.31.json",
+        "v3.0.0-beta.32": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-beta.32.json",
+        "v3.0.0-beta.33": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-beta.33.json",
+        "v3.0.0-beta.34": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-beta.34.json",
+        "v3.0.0-beta.35": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-beta.35.json",
+        "v3.0.0-beta.36": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-beta.36.json",
+        "v3.0.0-beta.37": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-beta.37.json",
+        "v3.0.0-beta.38": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-beta.38.json",
+        "v3.0.0-beta.39": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-beta.39.json",
+        "v3.0.0-beta": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-beta.json",
+        "v3.0.0-rc1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-rc1.json",
+        "v3.0.0-rc2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-rc2.json",
+        "v3.0.0-rc3": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-rc3.json",
+        "v3.0.0-rc4": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-rc4.json",
+        "v3.0.0-rc5": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-rc5.json",
+        "v3.0.0-rc6": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-rc6.json",
+        "v3.0.0-rc7": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0-rc7.json",
+        "v3.0.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.0.json",
+        "v3.0.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.1.json",
+        "v3.0.10": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.10.json",
+        "v3.0.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.2.json",
+        "v3.0.3": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.3.json",
+        "v3.0.4": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.4.json",
+        "v3.0.5": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.5.json",
+        "v3.0.6": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.6.json",
+        "v3.0.7": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.7.json",
+        "v3.0.8": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.8.json",
+        "v3.0.9": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.0.9.json",
+        "v3.1.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.1.0.json",
+        "v3.2.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.2.0.json",
+        "v3.2.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.2.1.json",
+        "v3.3.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.3.0.json",
+        "v3.3.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v3.3.1.json",
+        "v4.0.0-rc.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v4.0.0-rc.1.json",
+        "v4.0.0-rc.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v4.0.0-rc.2.json",
+        "v4.0.0-rc.3": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v4.0.0-rc.3.json",
+        "v4.0.0-rc": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v4.0.0-rc.json",
+        "v4.0.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v4.0.0.json",
+        "v4.1.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v4.1.0.json",
+        "v4.2.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v4.2.0.json",
+        "v4.3.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v4.3.0.json",
+        "v4.4.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v4.4.0.json",
+        "v5.0.0-rc1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.0.0-rc1.json",
+        "v5.0.0-rc2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.0.0-rc2.json",
+        "v5.0.0-rc3": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.0.0-rc3.json",
+        "v5.0.0-rc4": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.0.0-rc4.json",
+        "v5.0.0-rc5": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.0.0-rc5.json",
+        "v5.0.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.0.0.json",
+        "v5.1.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.1.0.json",
+        "v5.2.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.2.0.json",
+        "v5.3.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.3.0.json",
+        "v5.3.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.3.1.json",
+        "v5.3.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.3.2.json",
+        "v5.3.3": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.3.3.json",
+        "v5.3.4": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.3.4.json",
+        "v5.3.5": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.3.5.json",
+        "v5.4.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.4.0.json",
+        "v5.5.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.5.0.json",
+        "v5.6.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.6.0.json",
+        "v5.7.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.7.0.json",
+        "v5.7.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.7.1.json",
+        "v5.7.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.7.2.json",
+        "v5.7.3": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.7.3.json",
+        "v5.8.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.8.0.json",
+        "v5.8.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.8.1.json",
+        "v5.9.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.9.0.json",
+        "v5.9.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.9.1.json",
+        "v5.9.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.9.2.json",
+        "v5.10.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.10.0.json",
+        "v5.10.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.10.1.json",
+        "v5.11.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.11.0.json",
+        "v5.11.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.11.1.json",
+        "v5.12.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.12.0.json",
+        "v5.12.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.12.1.json",
+        "v5.12.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.12.2.json",
+        "v5.12.3": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.12.3.json",
+        "v5.13.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.13.0.json",
+        "v5.14.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.14.0.json",
+        "v5.15.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.15.0.json",
+        "v5.16.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.16.0.json",
+        "v5.16.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.16.1.json",
+        "v5.17.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.17.0.json",
+        "v5.17.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.17.1.json",
+        "v5.17.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.17.2.json",
+        "v5.17.3": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.17.3.json",
+        "v5.18.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.18.0.json",
+        "v5.19.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.19.0.json",
+        "v5.19.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.19.1.json",
+        "v5.20.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.20.0.json",
+        "v5.20.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.20.1.json",
+        "v5.20.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.20.2.json",
+        "v5.21.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.21.0.json",
+        "v5.22.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.22.0.json",
+        "v5.22.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.22.1.json",
+        "v5.23.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.23.0.json",
+        "v5.24.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.24.0.json",
+        "v5.25.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.25.0.json",
+        "v5.26.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.26.0.json",
+        "v5.26.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.26.1.json",
+        "v5.27.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.27.0.json",
+        "v5.28.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.28.0.json",
+        "v5.29.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.29.0.json",
+        "v5.30.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.30.0.json",
+        "v5.31.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.31.0.json",
+        "v5.32.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.32.0.json",
+        "v5.33.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v5.33.0.json",
+        "v6.0.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v6.0.0.json",
+        "v6.1.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v6.1.0.json",
+        "v6.1.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v6.1.1.json",
+        "v6.1.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v6.1.2.json",
+        "v6.2.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v6.2.0.json",
+        "v6.3.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v6.3.1.json",
+        "v6.4.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega/v6.4.0.json"
+      }
     },
     {
       "name": "vega-lite.json",
       "description": "Vega-Lite visualization specification file",
       "fileMatch": ["*.vl", "*.vl.json"],
-      "url": "https://www.schemastore.org/vega-lite.json"
+      "url": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v6.4.3.json",
+      "versions": {
+        "v0.0.4": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v0.0.4.json",
+        "v0.8.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v0.8.1.json",
+        "v0.8.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v0.8.2.json",
+        "v0.8.3": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v0.8.3.json",
+        "v0.9.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v0.9.0.json",
+        "v0.9.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v0.9.1.json",
+        "v0.9.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v0.9.2.json",
+        "v0.9.3": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v0.9.3.json",
+        "v1.0.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v1.0.0.json",
+        "v1.0.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v1.0.1.json",
+        "v1.0.10": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v1.0.10.json",
+        "v1.0.11": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v1.0.11.json",
+        "v1.0.12": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v1.0.12.json",
+        "v1.0.13": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v1.0.13.json",
+        "v1.0.14": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v1.0.14.json",
+        "v1.0.15": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v1.0.15.json",
+        "v1.0.16": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v1.0.16.json",
+        "v1.0.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v1.0.2.json",
+        "v1.0.3": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v1.0.3.json",
+        "v1.0.5": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v1.0.5.json",
+        "v1.0.6": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v1.0.6.json",
+        "v1.0.7": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v1.0.7.json",
+        "v1.0.8": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v1.0.8.json",
+        "v1.0.9": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v1.0.9.json",
+        "v1.1.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v1.1.0.json",
+        "v1.1.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v1.1.1.json",
+        "v1.1.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v1.1.2.json",
+        "v1.1.3": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v1.1.3.json",
+        "v1.1.4": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v1.1.4.json",
+        "v1.2.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v1.2.0.json",
+        "v1.2.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v1.2.1.json",
+        "v1.3.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v1.3.0.json",
+        "v1.3.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v1.3.1.json",
+        "v2.0.0-alpha.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-alpha.0.json",
+        "v2.0.0-alpha.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-alpha.1.json",
+        "v2.0.0-alpha.10": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-alpha.10.json",
+        "v2.0.0-alpha.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-alpha.2.json",
+        "v2.0.0-alpha.3": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-alpha.3.json",
+        "v2.0.0-alpha.4": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-alpha.4.json",
+        "v2.0.0-alpha.6": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-alpha.6.json",
+        "v2.0.0-alpha.7": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-alpha.7.json",
+        "v2.0.0-alpha.8": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-alpha.8.json",
+        "v2.0.0-alpha.9": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-alpha.9.json",
+        "v2.0.0-alpha": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-alpha.json",
+        "v2.0.0-beta.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-beta.1.json",
+        "v2.0.0-beta.10": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-beta.10.json",
+        "v2.0.0-beta.11": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-beta.11.json",
+        "v2.0.0-beta.14": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-beta.14.json",
+        "v2.0.0-beta.15": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-beta.15.json",
+        "v2.0.0-beta.16": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-beta.16.json",
+        "v2.0.0-beta.17": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-beta.17.json",
+        "v2.0.0-beta.18": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-beta.18.json",
+        "v2.0.0-beta.19": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-beta.19.json",
+        "v2.0.0-beta.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-beta.2.json",
+        "v2.0.0-beta.21": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-beta.21.json",
+        "v2.0.0-beta.4": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-beta.4.json",
+        "v2.0.0-beta.5": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-beta.5.json",
+        "v2.0.0-beta.7": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-beta.7.json",
+        "v2.0.0-beta.8": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-beta.8.json",
+        "v2.0.0-beta.9": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-beta.9.json",
+        "v2.0.0-beta": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-beta.json",
+        "v2.0.0-rc0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-rc0.json",
+        "v2.0.0-rc1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-rc1.json",
+        "v2.0.0-rc2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-rc2.json",
+        "v2.0.0-rc3": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-rc3.json",
+        "v2.0.0-rc4": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-rc4.json",
+        "v2.0.0-rc5": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-rc5.json",
+        "v2.0.0-rc6": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0-rc6.json",
+        "v2.0.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.0.json",
+        "v2.0.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.1.json",
+        "v2.0.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.2.json",
+        "v2.0.3": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.3.json",
+        "v2.0.4": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.0.4.json",
+        "v2.1.0-beta1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.1.0-beta1.json",
+        "v2.1.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.1.0.json",
+        "v2.1.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.1.1.json",
+        "v2.1.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.1.2.json",
+        "v2.1.3": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.1.3.json",
+        "v2.2.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.2.0.json",
+        "v2.3.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.3.0.json",
+        "v2.3.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.3.1.json",
+        "v2.4.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.4.0.json",
+        "v2.4.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.4.1.json",
+        "v2.4.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.4.2.json",
+        "v2.4.3": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.4.3.json",
+        "v2.5.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.5.0.json",
+        "v2.5.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.5.1.json",
+        "v2.5.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.5.2.json",
+        "v2.6.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.6.0.json",
+        "v2.7.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v2.7.0.json",
+        "v3.0.0-rc0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v3.0.0-rc0.json",
+        "v3.0.0-rc1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v3.0.0-rc1.json",
+        "v3.0.0-rc10": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v3.0.0-rc10.json",
+        "v3.0.0-rc11": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v3.0.0-rc11.json",
+        "v3.0.0-rc12": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v3.0.0-rc12.json",
+        "v3.0.0-rc13": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v3.0.0-rc13.json",
+        "v3.0.0-rc16": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v3.0.0-rc16.json",
+        "v3.0.0-rc2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v3.0.0-rc2.json",
+        "v3.0.0-rc3": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v3.0.0-rc3.json",
+        "v3.0.0-rc4": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v3.0.0-rc4.json",
+        "v3.0.0-rc5": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v3.0.0-rc5.json",
+        "v3.0.0-rc6": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v3.0.0-rc6.json",
+        "v3.0.0-rc7": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v3.0.0-rc7.json",
+        "v3.0.0-rc8": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v3.0.0-rc8.json",
+        "v3.0.0-rc9": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v3.0.0-rc9.json",
+        "v3.0.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v3.0.0.json",
+        "v3.0.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v3.0.1.json",
+        "v3.0.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v3.0.2.json",
+        "v3.0.3": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v3.0.3.json",
+        "v3.1.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v3.1.0.json",
+        "v3.2.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v3.2.0.json",
+        "v3.2.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v3.2.1.json",
+        "v3.3.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v3.3.0.json",
+        "v3.4.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v3.4.0.json",
+        "v4.0.0-beta.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.0.0-beta.0.json",
+        "v4.0.0-beta.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.0.0-beta.1.json",
+        "v4.0.0-beta.10": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.0.0-beta.10.json",
+        "v4.0.0-beta.12": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.0.0-beta.12.json",
+        "v4.0.0-beta.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.0.0-beta.2.json",
+        "v4.0.0-beta.8": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.0.0-beta.8.json",
+        "v4.0.0-beta.9": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.0.0-beta.9.json",
+        "v4.0.0-beta": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.0.0-beta.json",
+        "v4.0.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.0.0.json",
+        "v4.0.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.0.2.json",
+        "v4.1.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.1.0.json",
+        "v4.1.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.1.1.json",
+        "v4.2.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.2.0.json",
+        "v4.3.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.3.0.json",
+        "v4.3.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.3.1.json",
+        "v4.4.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.4.0.json",
+        "v4.5.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.5.0.json",
+        "v4.5.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.5.1.json",
+        "v4.6.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.6.0.json",
+        "v4.7.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.7.0.json",
+        "v4.8.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.8.1.json",
+        "v4.9.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.9.0.json",
+        "v4.10.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.10.0.json",
+        "v4.10.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.10.1.json",
+        "v4.10.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.10.2.json",
+        "v4.10.4": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.10.4.json",
+        "v4.10.5": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.10.5.json",
+        "v4.11.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.11.0.json",
+        "v4.12.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.12.0.json",
+        "v4.12.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.12.1.json",
+        "v4.12.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.12.2.json",
+        "v4.13.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.13.0.json",
+        "v4.13.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.13.1.json",
+        "v4.14.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.14.0.json",
+        "v4.14.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.14.1.json",
+        "v4.15.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.15.0.json",
+        "v4.16.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.16.1.json",
+        "v4.16.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.16.2.json",
+        "v4.16.4": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.16.4.json",
+        "v4.16.7": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.16.7.json",
+        "v4.16.8": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.16.8.json",
+        "v4.17.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v4.17.0.json",
+        "v5.0.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.0.0.json",
+        "v5.1.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.1.0.json",
+        "v5.2.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.2.0.json",
+        "v5.4.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.4.0.json",
+        "v5.5.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.5.0.json",
+        "v5.6.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.6.0.json",
+        "v5.6.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.6.1.json",
+        "v5.7.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.7.0.json",
+        "v5.7.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.7.1.json",
+        "v5.8.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.8.0.json",
+        "v5.9.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.9.0.json",
+        "v5.9.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.9.1.json",
+        "v5.9.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.9.2.json",
+        "v5.9.3": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.9.3.json",
+        "v5.10.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.10.0.json",
+        "v5.11.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.11.0.json",
+        "v5.11.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.11.1.json",
+        "v5.12.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.12.0.json",
+        "v5.13.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.13.0.json",
+        "v5.14.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.14.0.json",
+        "v5.14.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.14.1.json",
+        "v5.15.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.15.0.json",
+        "v5.15.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.15.1.json",
+        "v5.16.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.16.0.json",
+        "v5.16.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.16.1.json",
+        "v5.16.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.16.2.json",
+        "v5.16.3": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.16.3.json",
+        "v5.17.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.17.0.json",
+        "v5.18.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.18.0.json",
+        "v5.18.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.18.1.json",
+        "v5.19.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.19.0.json",
+        "v5.20.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.20.0.json",
+        "v5.20.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.20.1.json",
+        "v5.21.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.21.0.json",
+        "v5.23.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v5.23.0.json",
+        "v6.0.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v6.0.0.json",
+        "v6.0.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v6.0.1.json",
+        "v6.0.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v6.0.2.json",
+        "v6.1.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v6.1.0.json",
+        "v6.2.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v6.2.0.json",
+        "v6.3.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v6.3.1.json",
+        "v6.4.0": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v6.4.0.json",
+        "v6.4.1": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v6.4.1.json",
+        "v6.4.2": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v6.4.2.json",
+        "v6.4.3": "https://raw.githubusercontent.com/vega/schema/refs/heads/master/vega-lite/v6.4.3.json"
+      }
     },
     {
       "name": "Vela Pipeline Configuration",
       "description": "Vela Pipeline Configuration File",
       "fileMatch": [".vela.yml", ".vela.yaml"],
       "url": "https://github.com/go-vela/server/releases/latest/download/schema.json"
-    },
-    {
-      "name": "venvironment.yaml",
-      "description": "Simulation and test environment for Vector CANoe Server Editions",
-      "fileMatch": [
-        "venvironment.yaml",
-        "*.venvironment.yaml",
-        "venvironment.yml",
-        "*.venvironment.yml",
-        "venvironment.json",
-        "*.venvironment.json"
-      ],
-      "url": "https://www.schemastore.org/venvironment-schema-v5.1.0.json",
-      "versions": {
-        "1.0.0": "https://www.schemastore.org/venvironment-schema-v1.0.0.json",
-        "1.1.0": "https://www.schemastore.org/venvironment-schema-v1.1.0.json",
-        "1.1.1": "https://www.schemastore.org/venvironment-schema-v1.1.1.json",
-        "2.0.0": "https://www.schemastore.org/venvironment-schema-v2.0.0.json",
-        "2.1.0": "https://www.schemastore.org/venvironment-schema-v2.1.0.json",
-        "2.2.0": "https://www.schemastore.org/venvironment-schema-v2.2.0.json",
-        "3.0.0": "https://www.schemastore.org/venvironment-schema-v3.0.0.json",
-        "3.1.0": "https://www.schemastore.org/venvironment-schema-v3.1.0.json",
-        "3.2.0": "https://www.schemastore.org/venvironment-schema-v3.2.0.json",
-        "4.0.0": "https://www.schemastore.org/venvironment-schema-v4.0.0.json",
-        "4.1.0": "https://www.schemastore.org/venvironment-schema-v4.1.0.json",
-        "4.2.0": "https://www.schemastore.org/venvironment-schema-v4.2.0.json",
-        "5.0.0": "https://www.schemastore.org/venvironment-schema-v5.0.0.json",
-        "5.1.0": "https://www.schemastore.org/venvironment-schema-v5.1.0.json"
-      }
-    },
-    {
-      "name": "venvplus.yaml",
-      "description": "venvplus settings of Vector CANoe Server Editions",
-      "fileMatch": [
-        "venvplus.yaml",
-        "*.venvplus.yaml",
-        "venvplus.yml",
-        "*.venvplus.yml",
-        "venvplus.json",
-        "*.venvplus.json"
-      ],
-      "url": "https://www.schemastore.org/venvplus-schema-v1.2.0.json",
-      "versions": {
-        "1.0.0": "https://www.schemastore.org/venvplus-schema-v1.0.0.json",
-        "1.1.0": "https://www.schemastore.org/venvplus-schema-v1.1.0.json",
-        "1.2.0": "https://www.schemastore.org/venvplus-schema-v1.2.0.json"
-      }
     },
     {
       "name": "Version Bumper config",
@@ -8047,30 +9178,16 @@
       "url": "https://www.schemastore.org/vss-extension.json"
     },
     {
-      "name": "vtesttree.yaml",
-      "description": "Vector test execution tree description",
-      "fileMatch": ["*.vtesttree.yaml", "*.vtesttree.yml", "*.vtesttree.json"],
-      "url": "https://www.schemastore.org/vtesttree-schema-v2.4.0.json",
-      "versions": {
-        "1.0.0": "https://www.schemastore.org/vtesttree-schema-v1.0.0.json",
-        "2.0.0": "https://www.schemastore.org/vtesttree-schema-v2.0.0.json",
-        "2.1.0": "https://www.schemastore.org/vtesttree-schema-v2.1.0.json",
-        "2.2.0": "https://www.schemastore.org/vtesttree-schema-v2.2.0.json",
-        "2.3.0": "https://www.schemastore.org/vtesttree-schema-v2.3.0.json",
-        "2.4.0": "https://www.schemastore.org/vtesttree-schema-v2.4.0.json"
-      }
-    },
-    {
-      "name": "vtestunit.yaml",
-      "description": "Vector test unit description",
-      "fileMatch": ["*.vtestunit.yaml", "*.vtestunit.yml", "*.vtestunit.json"],
-      "url": "https://www.schemastore.org/vtestunit-schema.json"
-    },
-    {
       "name": "v8r",
       "description": "v8r configuration file",
       "fileMatch": [".v8rrc.json", ".v8rrc.yaml", ".v8rrc.yml"],
       "url": "https://raw.githubusercontent.com/chris48s/v8r/main/config-schema.json"
+    },
+    {
+      "name": "Thunderbird Extension",
+      "description": "Thunderbird add-on manifest.json (Manifest V3)",
+      "fileMatch": ["thunderbird-extension.json"],
+      "url": "https://www.schemastore.org/thunderbird-extension.json"
     },
     {
       "name": "WebExtensions",
@@ -8083,6 +9200,12 @@
       "description": "Web Application manifest file",
       "fileMatch": ["manifest.json", "*.webmanifest"],
       "url": "https://www.schemastore.org/web-manifest-combined.json"
+    },
+    {
+      "name": "WebJEA configuration",
+      "description": "Configuration file for WebJEA, a web-based PowerShell JEA execution framework",
+      "fileMatch": ["webjea.json"],
+      "url": "https://www.schemastore.org/webjea.json"
     },
     {
       "name": "webjobs-list.json",
@@ -8221,7 +9344,7 @@
     },
     {
       "name": "huskyrc",
-      "description": "Husky can prevent bad `git commit`, `git push` and more 🐶 woof!",
+      "description": "Husky can prevent bad `git commit`, `git push` and more \ud83d\udc36 woof!",
       "fileMatch": [".huskyrc", ".huskyrc.json"],
       "url": "https://www.schemastore.org/huskyrc.json"
     },
@@ -8229,7 +9352,7 @@
       "name": "lychee",
       "description": "lychee link checker configuration file",
       "fileMatch": ["lychee.toml", ".lychee.toml"],
-      "url": "https://www.schemastore.org/lychee.json"
+      "url": "https://github.com/lycheeverse/lychee/releases/latest/download/schema.json"
     },
     {
       "name": "lint-staged (.lintstagedrc)",
@@ -8276,6 +9399,24 @@
       "url": "https://raw.githubusercontent.com/metalbear-co/mirrord/main/mirrord-schema.json"
     },
     {
+      "name": "mirrord up config",
+      "description": "mirrord up configuration file",
+      "fileMatch": ["mirrord-up.yaml", "mirrord-up.yml"],
+      "url": "https://raw.githubusercontent.com/metalbear-co/mirrord/main/mirrord-up-schema.json"
+    },
+    {
+      "name": "fnox",
+      "description": "fnox config, encrypted/remote secret manager",
+      "fileMatch": [
+        ".fnox.toml",
+        ".fnox.*.toml",
+        "fnox.toml",
+        "fnox.*.toml",
+        "**/.config/fnox/config.toml"
+      ],
+      "url": "https://fnox.jdx.dev/schema.json"
+    },
+    {
       "name": "mise",
       "description": "mise config, a polyglot dev tool manager",
       "fileMatch": [
@@ -8291,6 +9432,11 @@
         "**/mise/conf.d/*.toml"
       ],
       "url": "https://mise.jdx.dev/schema/mise.json"
+    },
+    {
+      "name": "mise task",
+      "description": "mise config for `task_config.includes` tasks",
+      "url": "https://mise.jdx.dev/schema/mise-task.json"
     },
     {
       "name": "mta.yaml",
@@ -8318,7 +9464,7 @@
     },
     {
       "name": "xs-app.json",
-      "description": "the SAP Application Router v8.2.2",
+      "description": "SAP Application Router configuration file",
       "fileMatch": ["xs-app.json"],
       "url": "https://www.schemastore.org/xs-app.json"
     },
@@ -8458,8 +9604,8 @@
       "url": "https://www.schemastore.org/container-structure-test.json"
     },
     {
-      "name": "Žinoma",
-      "description": "Žinoma incremental build configuration",
+      "name": "\u017dinoma",
+      "description": "\u017dinoma incremental build configuration",
       "fileMatch": ["zinoma.yml"],
       "url": "https://github.com/fbecart/zinoma/releases/latest/download/zinoma-schema.json"
     },
@@ -8578,7 +9724,7 @@
     {
       "name": "djlint",
       "description": "djLint configuration file",
-      "fileMatch": [".djlintrc"],
+      "fileMatch": [".djlintrc", "djlint.toml", ".djlint.toml"],
       "url": "https://www.schemastore.org/djlint.json"
     },
     {
@@ -8597,18 +9743,19 @@
       "name": "Apollo Router",
       "description": "Apollo Router: The runtime for graph-based API orchestration",
       "fileMatch": ["apollo-router-*.json"],
-      "url": "https://www.schemastore.org/apollo-router-2.9.0.json",
+      "url": "https://www.schemastore.org/apollo-router-2.17.0.json",
       "versions": {
         "2.8.1": "https://www.schemastore.org/apollo-router-2.8.1.json",
         "2.8.2": "https://www.schemastore.org/apollo-router-2.8.2.json",
-        "2.9.0": "https://www.schemastore.org/apollo-router-2.9.0.json"
+        "2.9.0": "https://www.schemastore.org/apollo-router-2.9.0.json",
+        "2.17.0": "https://www.schemastore.org/apollo-router-2.17.0.json"
       }
     },
     {
       "name": "Gradle Enterprise",
       "description": "Gradle Enterprise configuration",
       "fileMatch": ["*gradle-enterprise.yml", "*gradle-enterprise.yaml"],
-      "url": "https://docs.gradle.com/downloads/gradle-enterprise-config-schema/gradle-enterprise-config-schema-16.json",
+      "url": "https://docs.gradle.com/downloads/gradle-enterprise-config-schema/gradle-enterprise-config-schema-17.json",
       "versions": {
         "1.0": "https://docs.gradle.com/develocity/helm-admin/schema/gradle-enterprise-config-schema-1.json",
         "2.0": "https://docs.gradle.com/develocity/helm-admin/schema/gradle-enterprise-config-schema-2.json",
@@ -8625,7 +9772,8 @@
         "13.0": "https://docs.gradle.com/downloads/gradle-enterprise-config-schema/gradle-enterprise-config-schema-13.json",
         "14.0": "https://docs.gradle.com/downloads/gradle-enterprise-config-schema/gradle-enterprise-config-schema-14.json",
         "15.0": "https://docs.gradle.com/downloads/gradle-enterprise-config-schema/gradle-enterprise-config-schema-15.json",
-        "16.0": "https://docs.gradle.com/downloads/gradle-enterprise-config-schema/gradle-enterprise-config-schema-16.json"
+        "16.0": "https://docs.gradle.com/downloads/gradle-enterprise-config-schema/gradle-enterprise-config-schema-16.json",
+        "17.0": "https://docs.gradle.com/downloads/gradle-enterprise-config-schema/gradle-enterprise-config-schema-17.json"
       }
     },
     {
@@ -8731,7 +9879,7 @@
     },
     {
       "name": "Render Blueprints",
-      "description": "Blueprints are Render’s infrastructure-as-code model for defining, deploying, and managing multiple resources with a single YAML file",
+      "description": "Blueprints are Render\u2019s infrastructure-as-code model for defining, deploying, and managing multiple resources with a single YAML file",
       "fileMatch": ["**/*render.yaml"],
       "url": "https://render.com/schema/render.yaml.json"
     },
@@ -9826,6 +10974,42 @@
       "url": "https://www.schemastore.org/any.json"
     },
     {
+      "name": "ZeroPress Build Pages Config",
+      "description": "Configuration for building ZeroPress sites from Markdown",
+      "fileMatch": ["**/.zeropress/config.json"],
+      "url": "https://www.schemastore.org/zeropress-build-pages-config-1.0.json",
+      "versions": {
+        "1.0": "https://www.schemastore.org/zeropress-build-pages-config-1.0.json"
+      }
+    },
+    {
+      "name": "ZeroPress Preview Data",
+      "description": "Site data for ZeroPress static builds and theme previews",
+      "fileMatch": ["zeropress-preview-data.json"],
+      "url": "https://www.schemastore.org/zeropress-preview-data-0.7.json",
+      "versions": {
+        "0.7": "https://www.schemastore.org/zeropress-preview-data-0.7.json"
+      }
+    },
+    {
+      "name": "ZeroPress Theme Runtime",
+      "description": "Theme manifests for the ZeroPress template runtime",
+      "fileMatch": [],
+      "url": "https://www.schemastore.org/zeropress-theme-runtime-0.7.json",
+      "versions": {
+        "0.7": "https://www.schemastore.org/zeropress-theme-runtime-0.7.json"
+      }
+    },
+    {
+      "name": "ZeroPress WXR Import Base",
+      "description": "Base settings for importing WordPress exports with ZeroPress",
+      "fileMatch": ["wxr-import-base.json"],
+      "url": "https://www.schemastore.org/zeropress-wxr-import-base-0.7.json",
+      "versions": {
+        "0.7": "https://www.schemastore.org/zeropress-wxr-import-base-0.7.json"
+      }
+    },
+    {
       "name": "zerops.yml",
       "description": "Zerops build, deploy and run configuration YAML file",
       "fileMatch": ["zerops.yml", "zerops.yaml"],
@@ -10027,9 +11211,104 @@
     },
     {
       "name": "moon.yml",
-      "description": "Moonrepo project configuration file",
-      "fileMatch": ["moon.yml"],
-      "url": "https://raw.githubusercontent.com/moonrepo/moon/master/website/static/schemas/project.json"
+      "description": "moon (moonrepo) project configuration file",
+      "fileMatch": [
+        "moon.yml",
+        "moon.yaml",
+        "moon.json",
+        "moon.jsonc",
+        "moon.toml"
+      ],
+      "url": "https://moonrepo.dev/schemas/v2/project.json",
+      "versions": {
+        "1": "https://moonrepo.dev/schemas/v1/project.json",
+        "2": "https://moonrepo.dev/schemas/v2/project.json"
+      }
+    },
+    {
+      "name": "moon workspace",
+      "description": "moon (moonrepo) workspace configuration file",
+      "fileMatch": [
+        "**/.moon/workspace.yml",
+        "**/.moon/workspace.yaml",
+        "**/.moon/workspace.json",
+        "**/.moon/workspace.jsonc",
+        "**/.moon/workspace.toml",
+        "**/.config/moon/workspace.yml",
+        "**/.config/moon/workspace.yaml",
+        "**/.config/moon/workspace.json",
+        "**/.config/moon/workspace.jsonc",
+        "**/.config/moon/workspace.toml"
+      ],
+      "url": "https://moonrepo.dev/schemas/v2/workspace.json",
+      "versions": {
+        "1": "https://moonrepo.dev/schemas/v1/workspace.json",
+        "2": "https://moonrepo.dev/schemas/v2/workspace.json"
+      }
+    },
+    {
+      "name": "moon toolchains",
+      "description": "moon (moonrepo) toolchains configuration file",
+      "fileMatch": [
+        "**/.moon/toolchains.yml",
+        "**/.moon/toolchains.yaml",
+        "**/.moon/toolchains.json",
+        "**/.moon/toolchains.jsonc",
+        "**/.moon/toolchains.toml",
+        "**/.config/moon/toolchains.yml",
+        "**/.config/moon/toolchains.yaml",
+        "**/.config/moon/toolchains.json",
+        "**/.config/moon/toolchains.jsonc",
+        "**/.config/moon/toolchains.toml"
+      ],
+      "url": "https://moonrepo.dev/schemas/v2/toolchains.json"
+    },
+    {
+      "name": "moon extensions",
+      "description": "moon (moonrepo) extensions configuration file",
+      "fileMatch": [
+        "**/.moon/extensions.yml",
+        "**/.moon/extensions.yaml",
+        "**/.moon/extensions.json",
+        "**/.moon/extensions.jsonc",
+        "**/.moon/extensions.toml",
+        "**/.config/moon/extensions.yml",
+        "**/.config/moon/extensions.yaml",
+        "**/.config/moon/extensions.json",
+        "**/.config/moon/extensions.jsonc",
+        "**/.config/moon/extensions.toml"
+      ],
+      "url": "https://moonrepo.dev/schemas/v2/extensions.json"
+    },
+    {
+      "name": "moon tasks",
+      "description": "moon (moonrepo) inherited tasks configuration file",
+      "fileMatch": [
+        "**/.moon/tasks/**/*.yml",
+        "**/.moon/tasks/**/*.yaml",
+        "**/.moon/tasks/**/*.json",
+        "**/.moon/tasks/**/*.jsonc",
+        "**/.moon/tasks/**/*.toml",
+        "**/.config/moon/tasks/**/*.yml",
+        "**/.config/moon/tasks/**/*.yaml",
+        "**/.config/moon/tasks/**/*.json",
+        "**/.config/moon/tasks/**/*.jsonc",
+        "**/.config/moon/tasks/**/*.toml"
+      ],
+      "url": "https://moonrepo.dev/schemas/v2/tasks.json",
+      "versions": {
+        "1": "https://moonrepo.dev/schemas/v1/tasks.json",
+        "2": "https://moonrepo.dev/schemas/v2/tasks.json"
+      }
+    },
+    {
+      "name": "moon template",
+      "description": "moon (moonrepo) code generation template configuration file (template.yml)",
+      "url": "https://moonrepo.dev/schemas/v2/template.json",
+      "versions": {
+        "1": "https://moonrepo.dev/schemas/v1/template.json",
+        "2": "https://moonrepo.dev/schemas/v2/template.json"
+      }
     },
     {
       "name": "WireMock stub mapping",
@@ -10768,6 +12047,24 @@
       }
     },
     {
+      "name": "AgentCtl config",
+      "description": "agentctl config file (.ai/config.yaml): runtimes, project name, and sync settings for AI coding-agent configuration",
+      "fileMatch": ["**/.ai/config.yaml", "**/.ai/config.yml"],
+      "url": "https://raw.githubusercontent.com/itslab42/agentctl/main/schemas/config.schema.json"
+    },
+    {
+      "name": "AgentCtl MCP",
+      "description": "agentctl MCP server declarations (.ai/mcp.yaml): Model Context Protocol servers rendered into each runtime's format",
+      "fileMatch": ["**/.ai/mcp.yaml", "**/.ai/mcp.yml"],
+      "url": "https://raw.githubusercontent.com/itslab42/agentctl/main/schemas/mcp.schema.json"
+    },
+    {
+      "name": "AgentCtl permissions",
+      "description": "agentctl runtime-neutral permissions (.ai/permissions.yaml): filesystem and shell rules using deny-over-allow precedence",
+      "fileMatch": ["**/.ai/permissions.yaml", "**/.ai/permissions.yml"],
+      "url": "https://raw.githubusercontent.com/itslab42/agentctl/main/schemas/permissions.schema.json"
+    },
+    {
       "name": "AgentLoopKit",
       "description": "Configuration file for AgentLoopKit, a repo-level engineering loop for coding agents",
       "fileMatch": ["agentloop.config.json"],
@@ -10861,7 +12158,7 @@
       "name": "runspec",
       "description": "Interface specification for anything runnable — scripts, apps, and MCP tools",
       "fileMatch": ["runspec.toml"],
-      "url": "https://raw.githubusercontent.com/JasonFinestone/runspec/main/schema/runspec.schema.json"
+      "url": "https://runspec.app/runspec.schema.json"
     },
     {
       "name": "dacier.yml",
@@ -10977,8 +12274,60 @@
       "url": "https://raw.githubusercontent.com/hudson-trading/slang-server/refs/heads/main/clients/vscode/resources/config.schema.json"
     },
     {
+      "name": "cfgd Config",
+      "description": "cfgd root configuration file (cfgd.yaml)",
+      "fileMatch": ["cfgd.yaml", "cfgd.yml"],
+      "url": "https://www.schemastore.org/cfgd-config-0.12.0.json",
+      "versions": {
+        "0.5.0": "https://www.schemastore.org/cfgd-config-0.5.0.json",
+        "0.10.0": "https://www.schemastore.org/cfgd-config-0.10.0.json",
+        "0.11.0": "https://www.schemastore.org/cfgd-config-0.11.0.json",
+        "0.12.0": "https://www.schemastore.org/cfgd-config-0.12.0.json"
+      }
+    },
+    {
+      "name": "cfgd Module",
+      "description": "cfgd Module definition document",
+      "fileMatch": ["**/modules/*/module.yaml"],
+      "url": "https://www.schemastore.org/cfgd-module-0.12.0.json",
+      "versions": {
+        "0.5.0": "https://www.schemastore.org/cfgd-module-0.5.0.json",
+        "0.10.0": "https://www.schemastore.org/cfgd-module-0.10.0.json",
+        "0.11.0": "https://www.schemastore.org/cfgd-module-0.11.0.json",
+        "0.12.0": "https://www.schemastore.org/cfgd-module-0.12.0.json"
+      }
+    },
+    {
+      "name": "cfgd Profile",
+      "description": "cfgd Profile definition document",
+      "fileMatch": [
+        "**/profiles/*/profile.yaml",
+        "**/profiles/*.yaml",
+        "**/profiles/*.yml"
+      ],
+      "url": "https://www.schemastore.org/cfgd-profile-0.12.0.json",
+      "versions": {
+        "0.5.0": "https://www.schemastore.org/cfgd-profile-0.5.0.json",
+        "0.10.0": "https://www.schemastore.org/cfgd-profile-0.10.0.json",
+        "0.11.0": "https://www.schemastore.org/cfgd-profile-0.11.0.json",
+        "0.12.0": "https://www.schemastore.org/cfgd-profile-0.12.0.json"
+      }
+    },
+    {
+      "name": "cfgd ConfigSource",
+      "description": "cfgd multi-source configuration manifest (cfgd-source.yaml)",
+      "fileMatch": ["cfgd-source.yaml", "cfgd-source.yml"],
+      "url": "https://www.schemastore.org/cfgd-configsource-0.12.0.json",
+      "versions": {
+        "0.5.0": "https://www.schemastore.org/cfgd-configsource-0.5.0.json",
+        "0.10.0": "https://www.schemastore.org/cfgd-configsource-0.10.0.json",
+        "0.11.0": "https://www.schemastore.org/cfgd-configsource-0.11.0.json",
+        "0.12.0": "https://www.schemastore.org/cfgd-configsource-0.12.0.json"
+      }
+    },
+    {
       "name": "Heloisa Assistant Plugins Marketplace",
-      "description": "Validation rules for the Heloísa assistant's plugin catalog",
+      "description": "Validation rules for the Helo\u00edsa assistant's plugin catalog",
       "fileMatch": ["heloisa-marketplace.json"],
       "url": "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/heloisa-marketplace.json"
     },
@@ -11006,6 +12355,215 @@
       "versions": {
         "0.3.0": "https://ayeshlk.github.io/archsmith/schema/0.3.0/diagram-schema.json"
       }
+    },
+    {
+      "name": "yaml-workflow",
+      "description": "Workflow definition for the yaml-workflow engine — params, tasks, steps, imports, and flows",
+      "fileMatch": ["**/*.yaml-workflow.yaml", "**/*.yaml-workflow.yml"],
+      "url": "https://raw.githubusercontent.com/orieg/yaml-workflow/main/schema/workflow-schema.json"
+    },
+    {
+      "name": "servercn",
+      "description": "Servercn is the backend component registry for node.js inspired by shadcn/ui",
+      "fileMatch": ["servercn.config.json", "servercn.json"],
+      "url": "https://www.akkaldhami.com.np/schema/servercn.config.json"
+    },
+    {
+      "name": "hitf-cli-md",
+      "description": "hitf-cli translation toolkit    configuration file",
+      "fileMatch": [".hias-hitf.json", ".hias-hitf.jsonc"],
+      "url": "https://www.schemastore.org/hias-hitf.json"
+    },
+    {
+      "name": "HULL - Helm Uniform Layer Library",
+      "description": "Configuration options for HULL based Helm charts",
+      "url": "https://github.com/vidispine/hull/blob/main/hull/values.schema.json",
+      "versions": {
+        "1.34": "https://github.com/vidispine/hull/blob/release-1.34/hull/values.schema.json",
+        "1.35": "https://github.com/vidispine/hull/blob/release-1.35/hull/values.schema.json",
+        "1.36": "https://github.com/vidispine/hull/blob/release-1.36/hull/values.schema.json"
+      }
+    },
+    {
+      "name": "urai-ecma",
+      "description": "Configuration file for urai-ecma: AST commentary, pruning, and LLM context packaging engine for ECMAScript codebases",
+      "fileMatch": ["urai.config.jsonc", "urai.config.json"],
+      "url": "https://www.schemastore.org/urai-ecma.json"
+    },
+    {
+      "name": "Production delivery manifest",
+      "description": "Rights-labelled video-production delivery manifest",
+      "fileMatch": ["production-delivery-manifest.json"],
+      "url": "https://raw.githubusercontent.com/SHARProduction/production-delivery-manifest-schema/v1.0.0/schema.json"
+    },
+    {
+      "name": "Defakto CI",
+      "description": "CI configuration files used at Defakto Security",
+      "fileMatch": ["**/.defakto/ci.yaml"],
+      "url": "https://defakto-security.github.io/build-actions/ci.schema.json"
+    },
+    {
+      "name": "AAES evidence export (aaes.export/v2)",
+      "description": "One JSON value in an aaes.export/v2 JSON Lines evidence export: a header, entry, or anchor line recording authorization decisions for AI agent actions; cryptographic verification is separate from structural validation",
+      "url": "https://aaes.ai/spec/v2/export.schema.json"
+    },
+    {
+      "name": "AAES evidence pack manifest (aaes.evidence-pack/1)",
+      "description": "Manifest for an AAES evidence pack directory: stated population, explicit coverage exclusions, and file inventory for examiner review of AI agent action evidence",
+      "url": "https://aaes.ai/spec/v1/evidence-pack-manifest.schema.json"
+    },
+    {
+      "name": "Allstar Action",
+      "description": "Allstar action policy configuration",
+      "fileMatch": [],
+      "url": "https://www.schemastore.org/allstar-action.json"
+    },
+    {
+      "name": "Allstar Administrators",
+      "description": "Allstar repository administrator policy configuration",
+      "fileMatch": [],
+      "url": "https://www.schemastore.org/allstar-admin.json"
+    },
+    {
+      "name": "Allstar Binary Artifacts",
+      "description": "Allstar binary artifacts policy configuration",
+      "fileMatch": ["binary_artifacts.yaml"],
+      "url": "https://www.schemastore.org/allstar-binary.json"
+    },
+    {
+      "name": "Allstar Branch Protection",
+      "description": "Allstar branch protection policy configuration",
+      "fileMatch": ["branch_protection.yaml"],
+      "url": "https://www.schemastore.org/allstar-branch.json"
+    },
+    {
+      "name": "Allstar CODEOWNERS",
+      "description": "Allstar CODEOWNERS policy configuration",
+      "fileMatch": [],
+      "url": "https://www.schemastore.org/allstar-codeowners.json"
+    },
+    {
+      "name": "Allstar Configuration",
+      "description": "Allstar organization-level configuration file",
+      "fileMatch": ["allstar.yaml"],
+      "url": "https://www.schemastore.org/allstar-config.json"
+    },
+    {
+      "name": "Allstar Dangerous Workflow",
+      "description": "Allstar dangerous workflow policy configuration",
+      "fileMatch": ["dangerous_workflow.yaml"],
+      "url": "https://www.schemastore.org/allstar-workflow.json"
+    },
+    {
+      "name": "Allstar Outside Collaborators",
+      "description": "Allstar outside collaborators policy configuration",
+      "fileMatch": [],
+      "url": "https://www.schemastore.org/allstar-outside.json"
+    },
+    {
+      "name": "Allstar Scorecard",
+      "description": "Allstar Scorecard policy configuration",
+      "fileMatch": [],
+      "url": "https://www.schemastore.org/allstar-scorecard.json"
+    },
+    {
+      "name": "Allstar Security",
+      "description": "Allstar security policy configuration",
+      "fileMatch": [],
+      "url": "https://www.schemastore.org/allstar-security.json"
+    },
+    {
+      "name": "debim",
+      "description": "Declarative BIM (Building-as-Code) project manifest",
+      "fileMatch": [
+        "*.debim",
+        "*.debim.yaml",
+        "*.debim.yml",
+        "*.dbim",
+        "*.dbim.yaml",
+        "*.dbim.yml",
+        "project.debim",
+        "project.debim.yaml"
+      ],
+      "url": "https://raw.githubusercontent.com/PRIDA-TAKON/debim/main/debim.schema.json",
+      "versions": {
+        "1.0": "https://raw.githubusercontent.com/PRIDA-TAKON/debim/main/debim.schema.json"
+      }
+    },
+    {
+      "name": "Haijun Code Settings",
+      "description": "Configuration settings for Haijun Code, an AI coding assistant CLI",
+      "fileMatch": [],
+      "url": "https://www.schemastore.org/haijun-code-settings.json"
+    },
+    {
+      "name": "Haijun Code Marketplace",
+      "description": "Marketplace plugin manifest for Haijun Code",
+      "fileMatch": [],
+      "url": "https://www.schemastore.org/haijun-code-marketplace.json"
+    },
+    {
+      "name": "Haijun Code Plugin Manifest",
+      "description": "Plugin manifest (.haijun-plugin/plugin.json) for a Haijun Code plugin",
+      "fileMatch": ["**/.haijun-plugin/plugin.json"],
+      "url": "https://www.schemastore.org/haijun-code-plugin-manifest.json"
+    },
+    {
+      "name": "Haijun Tracks Discovery",
+      "description": "Discovery index for Haijun Tracks, listing published tracks with metadata, distribution URLs, and integrity digests",
+      "fileMatch": [],
+      "url": "https://www.schemastore.org/haijun-tracks-discovery.json"
+    },
+    {
+      "name": "Haijun Box Plugin",
+      "description": "Haijun Box plugin manifest for extending the Haijun Box CLI",
+      "fileMatch": [],
+      "url": "https://www.schemastore.org/haijun-box.json"
+    },
+    {
+      "name": "Haijun Voice Extension",
+      "description": "Haijun Voice extension manifest for cross-platform AI voice communication",
+      "fileMatch": [],
+      "url": "https://www.schemastore.org/haijun-voice.json"
+    },
+    {
+      "name": "Tracks",
+      "description": "Tracks knowledge-base format for AI agents (Markdown-based knowledge modules)",
+      "fileMatch": [],
+      "url": "https://www.schemastore.org/tracks.json"
+    },
+    {
+      "name": "Haijun Turborepo",
+      "description": "Turborepo configuration for Haijun projects (turbo.json)",
+      "fileMatch": [],
+      "url": "https://www.schemastore.org/haijun-turborepo.json"
+    },
+    {
+      "name": "Haijun Changesets",
+      "description": "Changesets configuration for Haijun projects (.changeset/config.json)",
+      "fileMatch": [],
+      "url": "https://www.schemastore.org/haijun-changesets.json"
+    },
+    {
+      "name": "Haijun Release Please",
+      "description": "Release Please configuration for Haijun projects (release-please-config.json)",
+      "fileMatch": [],
+      "url": "https://www.schemastore.org/haijun-release-please.json"
+    },
+    {
+      "name": "Yazi yazi.toml",
+      "description": "Yazi file manager's general configutraion file",
+      "url": "https://yazi-rs.github.io/schemas/yazi.json"
+    },
+    {
+      "name": "Yazi keymap.toml",
+      "description": "Yazi file manager's kebindings configutraion file",
+      "url": "https://yazi-rs.github.io/schemas/keymap.json"
+    },
+    {
+      "name": "Yazi theme.toml",
+      "description": "Yazi file manager's color scheme configutraion file",
+      "url": "https://yazi-rs.github.io/schemas/theme.json"
     }
   ]
 }

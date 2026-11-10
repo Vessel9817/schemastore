@@ -1,165 +1,50 @@
 {
   "$schema": "./schema-validation.schema.json",
   "ajvNotStrictMode": [
-    "anywork-ac-1.0.json",
-    "anywork-ac-1.1.json",
-    "appsettings.json",
-    "asmdef.json",
-    "aurora-1.0.json",
-    "aurora-1.1.json",
-    "aurora-1.2.json",
-    "aurora-1.3.json",
-    "aurora-2.0.json",
-    "azure-deviceupdate-update-manifest-4.json",
-    "azure-deviceupdate-update-manifest-5.json",
-    "azure-deviceupdate-import-manifest-4.0.json",
-    "azure-deviceupdate-import-manifest-5.0.json",
-    "azure-iot-edge-deployment-1.0.json",
-    "azure-iot-edge-deployment-2.0.json",
-    "azure-iot-edge-deployment-template-1.0.json",
-    "azure-iot-edge-deployment-template-2.0.json",
-    "azure-iot-edge-deployment-template-3.0.json",
-    "azure-iot-edge-deployment-template-4.0.json",
-    "azure-iot-edgeagent-deployment-1.0.json",
-    "azure-iot-edgeagent-deployment-1.1.json",
-    "backportrc.json",
-    "behat.json",
-    "bitrise-step.json",
-    "bitrise.json",
+    "abc-clinical-demand-forecast-5.1.0.json",
+    "abc-clinical-demand-forecast-5.2.0.json",
+    "abc-clinical-demand-forecast-5.3.0.json",
+    "abc-clinical-demand-forecast-6.0.0.json",
+    "abc-supply-plan-14.1.0.json",
+    "abc-supply-plan-14.2.0.json",
+    "abc-supply-plan-14.3.0.json",
     "bootstraprc.json",
     "bower.json",
-    "boyka-config.json",
     "bukkit-plugin.json",
     "bxci.schema-1.0.json",
     "bxci.schema-1.0.1.json",
     "bxci.schema-2.0.0.json",
     "bxci.schema-2.x.json",
     "catalog-info.json",
-    "chrome-manifest.json",
     "chisel-slices.json",
     "cloud-sdk-pipeline-config-schema.json",
     "cloudify.json",
-    "codeclimate.json",
-    "codeship-services.json",
-    "codeship-steps.json",
-    "coffeelint.json",
-    "commands.json",
     "commitlintrc.json",
-    "compile-commands.json",
-    "compilerconfig.json",
-    "creatomic.json",
-    "crowdin.json",
     "dart-test.json",
     "datalogic-scan2deploy-android.json",
     "datalogic-scan2deploy-ce.json",
-    "debugsettings.json",
-    "devinit.schema-1.0.json",
-    "devinit.schema-2.0.json",
-    "devinit.schema-3.0.json",
-    "devinit.schema-4.0.json",
-    "devinit.schema-5.0.json",
-    "devinit.schema-6.0.json",
     "dofigen.json",
-    "dotnetcli.host.json",
     "drone.json",
     "drupal-recipe.json",
-    "enonic-xp-admin-extension-8.0.0-B4.json",
-    "enonic-xp-admin-tool-8.0.0-B4.json",
-    "enonic-xp-api-8.0.0-B4.json",
-    "enonic-xp-application-8.0.0-B4.json",
-    "enonic-xp-cms-8.0.0-B4.json",
-    "enonic-xp-content-type-8.0.0-B4.json",
-    "enonic-xp-form-fragment-8.0.0-B4.json",
-    "enonic-xp-idprovider-8.0.0-B4.json",
-    "enonic-xp-layout-8.0.0-B4.json",
-    "enonic-xp-macro-8.0.0-B4.json",
-    "enonic-xp-mixin-8.0.0-B4.json",
-    "enonic-xp-page-8.0.0-B4.json",
-    "enonic-xp-part-8.0.0-B4.json",
-    "enonic-xp-service-8.0.0-B4.json",
-    "enonic-xp-site-8.0.0-B4.json",
-    "enonic-xp-style-8.0.0-B4.json",
-    "enonic-xp-task-8.0.0-B4.json",
-    "enonic-xp-webapp-8.0.0-B4.json",
-    "enonic-xp-admin-extension-8.0.0-B5.json",
-    "enonic-xp-admin-tool-8.0.0-B5.json",
-    "enonic-xp-api-8.0.0-B5.json",
-    "enonic-xp-application-8.0.0-B5.json",
-    "enonic-xp-cms-8.0.0-B5.json",
-    "enonic-xp-content-type-8.0.0-B5.json",
-    "enonic-xp-form-fragment-8.0.0-B5.json",
-    "enonic-xp-idprovider-8.0.0-B5.json",
-    "enonic-xp-layout-8.0.0-B5.json",
-    "enonic-xp-macro-8.0.0-B5.json",
-    "enonic-xp-mixin-8.0.0-B5.json",
-    "enonic-xp-page-8.0.0-B5.json",
-    "enonic-xp-part-8.0.0-B5.json",
-    "enonic-xp-service-8.0.0-B5.json",
-    "enonic-xp-site-8.0.0-B5.json",
-    "enonic-xp-style-8.0.0-B5.json",
-    "enonic-xp-task-8.0.0-B5.json",
-    "enonic-xp-webapp-8.0.0-B5.json",
-    "enonic-xp-admin-extension-8.0.0.json",
-    "enonic-xp-admin-tool-8.0.0.json",
-    "enonic-xp-api-8.0.0.json",
-    "enonic-xp-application-8.0.0.json",
-    "enonic-xp-cms-8.0.0.json",
-    "enonic-xp-content-type-8.0.0.json",
-    "enonic-xp-form-fragment-8.0.0.json",
-    "enonic-xp-idprovider-8.0.0.json",
-    "enonic-xp-layout-8.0.0.json",
-    "enonic-xp-macro-8.0.0.json",
-    "enonic-xp-mixin-8.0.0.json",
-    "enonic-xp-page-8.0.0.json",
-    "enonic-xp-part-8.0.0.json",
-    "enonic-xp-service-8.0.0.json",
-    "enonic-xp-site-8.0.0.json",
-    "enonic-xp-style-8.0.0.json",
-    "enonic-xp-task-8.0.0.json",
-    "enonic-xp-webapp-8.0.0.json",
-    "electron-builder.json",
     "esmrc.json",
-    "expo-37.0.0.json",
-    "expo-38.0.0.json",
-    "expo-39.0.0.json",
-    "expo-40.0.0.json",
-    "expo-41.0.0.json",
-    "expo-42.0.0.json",
-    "expo-46.0.0.json",
-    "expo-50.0.0.json",
-    "feed-1.json",
-    "feed.json",
     "flatpak-manifest.json",
-    "foundryvtt-module-manifest.json",
-    "foundryvtt-system-manifest.json",
-    "foundryvtt-world-manifest.json",
-    "function.json",
     "gaspar-1.0.json",
     "gaspar-3.0.json",
-    "github-action.json",
-    "github-funding.json",
-    "github-workflow-template-properties.json",
-    "github-workflow.json",
     "helmfile.json",
     "hemtt-0.6.2.json",
     "install.json",
     "jest.json",
-    "jovo-language-model.json",
     "jsdoc-1.0.0.json",
-    "jsone.json",
     "kestra-0.18.0.json",
     "kestra-0.18.1.json",
     "kestra-0.18.2.json",
     "kestra-0.18.3.json",
     "kestra-0.19.0.json",
     "label-commenter-config.json",
-    "launchsettings.json",
     "lerna.json",
     "libman.json",
     "lintstagedrc.schema.json",
-    "mdxlintrc.json",
     "metricshub.json",
-    "metricshub-connector.json",
     "minecraft-advancement.json",
     "minecraft-biome.json",
     "minecraft-dimension.json",
@@ -168,54 +53,13 @@
     "minecraft-predicate.json",
     "minecraft-recipe.json",
     "minecraft-template-pool.json",
-    "mtad.json",
-    "mprocs-0.6.4.json",
-    "nest-cli.json",
-    "netlify.json",
-    "nightwatch.json",
-    "ninjs-1.4.json",
-    "ninjs-2.0.json",
-    "now.json",
-    "npmpackagejsonlintrc.json",
-    "nswag.json",
     "nuget-project-3.3.0.json",
     "nuget-project.json",
-    "openfin.json",
-    "opensrm.json",
     "opspec-io-0.1.7.json",
     "package.json",
-    "package.manifest-8.0.0.json",
-    "package.manifest.json",
-    "paper-plugin.json",
-    "pattern.json",
-    "partial-eslint-plugins.json",
-    "phrase.json",
-    "phraseapp.json",
-    "plagiarize-0.0.json",
-    "plagiarize-me-0.0.json",
-    "plagiarize-me.json",
-    "plagiarize.json",
-    "pocketmine-plugin.json",
-    "pre-commit-config.json",
-    "prettierrc-1.8.2.json",
+    "partial-typo3-route-enhancers.json",
     "prisma.json",
-    "project-1.0.0-beta3.json",
-    "project-1.0.0-beta4.json",
-    "project-1.0.0-beta5.json",
-    "project-1.0.0-beta6.json",
-    "project-1.0.0-beta8.json",
-    "project-1.0.0-rc1.json",
-    "project-1.0.0-rc2.json",
-    "project.json",
-    "prometheus.json",
-    "proxies.json",
-    "pull-request-labeler.json",
-    "pull-request-labeler-5.json",
     "putout.json",
-    "pyrseas-0.8.json",
-    "pylock.json",
-    "rehyperc.json",
-    "remarkrc.json",
     "renovate-39.json",
     "renovate-40.json",
     "renovate-41.json",
@@ -226,55 +70,29 @@
     "renovate-global-schema-43.json",
     "renovate-inherited-schema-42.json",
     "renovate-inherited-schema-43.json",
-    "resjson.json",
-    "sarif-1.0.0.json",
     "sigmacv.json",
-    "size-limit.json",
-    "solidaritySchema.json",
-    "sprite.json",
-    "stale.json",
-    "staticwebapp.config.json",
     "stylelintrc.json",
-    "taurus.json",
     "template.json",
-    "templatesources.json",
-    "testenvironments.json",
-    "tmlanguage.json",
-    "travis.json",
-    "tsconfig.json",
+    "thunderbird-extension.json",
     "tslint.json",
-    "tsoa.json",
     "typings.json",
     "typingsrc.json",
     "typo3.json",
-    "ubuntu-server-autoinstall.json",
-    "utam-page-object.json",
-    "utam-page-object-1.5.0.json",
-    "utam-page-object-2.0.3.json",
-    "utam-page-object-2.2.0.json",
+    "typo3-file-storages.json",
+    "typo3-form-config.json",
+    "typo3-form-definition.json",
+    "typo3-rte-preset.json",
+    "typo3-set-route-enhancers.json",
+    "typo3-set-settings-definitions.json",
+    "typo3-site-csp.json",
     "utcm-monitor.json",
-    "vector.json",
-    "vega-lite.json",
-    "vs-nesting.json",
-    "vsext.json",
-    "vsix-manifestinjection.json",
-    "vsix-publish.json",
     "vss-extension.json",
-    "vtesttree-schema-v1.0.0.json",
-    "vtesttree-schema-v2.0.0.json",
-    "vtesttree-schema-v2.1.0.json",
-    "vtesttree-schema-v2.2.0.json",
-    "vtesttree-schema-v2.3.0.json",
-    "vtesttree-schema-v2.4.0.json",
-    "web-types.json",
     "webextension.json",
-    "webjob-publish-settings.json",
     "winget-pkgs-singleton-0.1.json",
     "workflows.json",
     "xs-app.json",
     "yamllint.json",
     "deployed.json",
-    "jfrog-pipelines.json",
     "lsdlschema-0.7.json",
     "lsdlschema-1.0.json",
     "lsdlschema-1.2.json",
@@ -283,43 +101,15 @@
     "lsdlschema-3.1.json",
     "lsdlschema-3.2.json",
     "lsdlschema-3.3.json",
-    "lsdlschema-3.4.json",
-    "lsdlschema-3.5.json",
-    "lsdlschema-4.0.json",
-    "lsdlschema-4.1.json",
     "lsdlschema.json",
-    "nodemon.json",
-    "openhab-5.1.json",
-    "partial-pyright.json",
-    "pep-723.json",
-    "pyproject.json",
-    "sarif-2.1.0-rtm.0.json",
-    "sarif-2.1.0-rtm.1.json",
-    "sarif-2.1.0-rtm.2.json",
-    "sarif-2.1.0-rtm.3.json",
-    "sarif-2.1.0-rtm.4.json",
-    "sarif-2.1.0-rtm.5.json",
-    "sarif-2.1.0-rtm.6.json",
-    "sarif-2.1.0.json",
-    "sarif-external-property-file-2.1.0-rtm.0.json",
-    "sarif-external-property-file-2.1.0-rtm.1.json",
-    "sarif-external-property-file-2.1.0-rtm.2.json",
-    "sarif-external-property-file-2.1.0-rtm.3.json",
-    "sarif-external-property-file-2.1.0-rtm.4.json",
-    "sarif-external-property-file-2.1.0-rtm.5.json",
-    "sarif-external-property-file-2.1.0.json",
-    "sarif-external-property-file.json",
-    "sarif.json",
-    "servicehub.config.schema.json",
-    "starlake.json",
-    "vega.json",
     "metaschema-draft-07-unofficial-strict.json",
     "glazewm.json",
     "youtrack-app.json",
-    "cinnamon-spice-settings.json",
-    "pnpm-workspace.json",
     "podman-desktop-extension.json",
-    "podman-desktop-extension-1.27.json"
+    "podman-desktop-extension-1.27.json",
+    "zeropress-build-pages-config-1.0.json",
+    "zeropress-preview-data-0.7.json",
+    "zeropress-wxr-import-base-0.7.json"
   ],
   "fileMatchConflict": [
     // Name conflicts must be avoided. Do not add additional items here
@@ -334,12 +124,18 @@
     // JSON schema 2019-09 and 2020-12 are not well supported by many IDEs and should not be used
     "jsone.json",
     "jsontron-0.1.json",
+    "k2f-manifest.json",
+    "k2f-nodes.json",
+    "k2f-styles.json",
+    "partial-k2f-signatures.json",
+    "partial-k2f-visual-primitives.json",
     "pgrls.json",
     "license-report-config.json",
     "openweather.current.json",
     "openweather.roadrisk.json",
     "openhab-5.1.json",
     "specif-1.1.json",
+    "urai-ecma.json",
     "ctfd.json",
     "zarf.json",
     "yamllint.json",
@@ -398,7 +194,15 @@
     "enonic-xp-site-8.0.0.json",
     "enonic-xp-style-8.0.0.json",
     "enonic-xp-task-8.0.0.json",
-    "enonic-xp-webapp-8.0.0.json"
+    "enonic-xp-webapp-8.0.0.json",
+    "cfgd-module-0.5.0.json",
+    "cfgd-module-0.10.0.json",
+    "cfgd-module-0.11.0.json",
+    "zeropress-build-pages-config-1.0.json",
+    "zeropress-preview-data-0.7.json",
+    "zeropress-theme-runtime-0.7.json",
+    "zeropress-wxr-import-base-0.7.json",
+    "cfgd-module-0.12.0.json"
   ],
   "missingCatalogUrl": [
     // Below this line are subschemas that are included from other schema
@@ -415,6 +219,7 @@
     "partial-cibuildwheel.json", // pyproject.json[tool.cibuildwheel]
     "partial-dfc.json", // pyproject.json[tool.dfc]
     "partial-fastapi.json", // pyproject.json[tool.fastapi]
+    "partial-inwards.json", // pyproject.json[tool.inwards]
     "partial-mypy.json", // pyproject.json[tool.mypy]
     "partial-pdm.json", // pyproject.json[tool.pdm]
     "partial-pdm-dockerize.json", // pyproject.json[tool.pdm.dockerize]
@@ -422,11 +227,15 @@
     "partial-poetry.json", // pyproject.json[tool.poetry]
     "partial-repo-review.json", // pyproject.json[tool.repo-review]
     "partial-scheduled.json", // pyproject.json[tool.scheduled]
+    "partial-simplint.json", // pyproject.json[tool.simplint]
     "partial-tox.json", // classic pyproject.json[tool.tox]
     "tox.json",
     "partial-eslint-plugins.json", // eslintrc.json[rules.*]
     "partial-fusion-pack-metadata.json", // minecraft-pack-mcmeta.json[fusion]
     "partial-fusion-texture-metadata.json", // minecraft-texture-mcmeta.json[fusion]
+    "partial-k2f-visual-primitives.json", // k2f-nodes.json / k2f-styles.json
+    "partial-typo3-imports.json", // typo3*.json[imports]
+    "partial-typo3-route-enhancers.json", // typo3*.json[routeEnhancers]
     "partial-taskipy.json", // pyproject.json[tool.taskipy]
     "poetry.json", // backwards-compat
     "setuptools.json", // backwards-compat
@@ -477,6 +286,7 @@
     // Add JSON schema to skiptest[] to skip the whole validation process
     // Below this line are the 'empty' schemas that should not be validated and also redirect to an external schema via a single $ref
     "block.json",
+    "djlint.json",
     "golangci-lint.json",
     "haxelib.json",
     "ksp-avc.json",
@@ -494,11 +304,14 @@
     "xunit-2.2.json",
     "xunit-2.3.json",
     "xunit.runner.schema.json",
+    "twee-ts.config.json",
     "databricks-asset-bundles.json",
     "declarative-automation-bundles.json",
     "gitversion.json",
     "lazygit.json",
+    "lychee.json",
     "circleciconfig.json",
+    "ttheme-market.json",
     "ogen.json", // uses external references
     "openapi-3.X.json", // uses external references
     "openapi-overlay-1.X.json", // uses external references
@@ -506,13 +319,44 @@
   ],
   "coverage": [
     {
+      "schema": "webjea.json",
+      "strict": true
+    },
+    {
+      "schema": "tfpowershell-datasource.json",
+      "strict": true
+    },
+    {
+      "schema": "tfpowershell-provider.json",
+      "strict": true
+    },
+    {
+      "schema": "tfpowershell-resource.json",
+      "strict": true
+    },
+    {
+      "schema": "tfpowershell-settings.json",
+      "strict": true
+    },
+    {
       "schema": "claude-code-settings.json",
       "strict": true
     },
     {
       "schema": "claude-code-keybindings.json",
       "strict": true
-    }
+    },
+    {
+      "schema": "replacement-transformer.json",
+      "strict": true
+    },
+    {
+      "schema": "value-add-transformer.json",
+      "strict": true
+    },
+    { "schema": "ttheme-marketplace.json" },
+    { "schema": "ttheme-palette.json" },
+    { "schema": "ttheme-work.json" }
   ],
   "catalogEntryNoLintNameOrDescription": [
     "https://json-schema.org/draft-04/schema",
@@ -544,6 +388,18 @@
       "unknownKeywords": ["abcHasValidKitItemReferences"]
     },
     "abc-clinical-demand-forecast-5.0.0.json": {
+      "unknownKeywords": ["abcHasValidKitItemReferences"]
+    },
+    "abc-clinical-demand-forecast-5.1.0.json": {
+      "unknownKeywords": ["abcHasValidKitItemReferences"]
+    },
+    "abc-clinical-demand-forecast-5.2.0.json": {
+      "unknownKeywords": ["abcHasValidKitItemReferences"]
+    },
+    "abc-clinical-demand-forecast-5.3.0.json": {
+      "unknownKeywords": ["abcHasValidKitItemReferences"]
+    },
+    "abc-clinical-demand-forecast-6.0.0.json": {
       "unknownKeywords": ["abcHasValidKitItemReferences"]
     },
     "abc-supply-plan-1.0.0.json": {
@@ -925,6 +781,72 @@
         "abcArePlanningFrequencyChangesOnPlanningMonths"
       ]
     },
+    "abc-supply-plan-14.1.0.json": {
+      "unknownFormat": ["abc-draft-js_RawDraftContentState"],
+      "unknownKeywords": [
+        "abcIsFirstDayOfMonth",
+        "abcIsLastDayOfMonth",
+        "abcIsAfter0001-01-01",
+        "abcIsBefore9999-12-31",
+        "abcDoMaterialIDsExist",
+        "abcIsAcyclic",
+        "abcAreAllocationMethodsHomogeneous",
+        "abcIsValidColor",
+        "abcNoDuplicateValuesForOrderingProperty",
+        "abcHasNonOverlappingTimeDependentValues",
+        "abcHasUninterruptedTimeDependentValues",
+        "abcIsExpirationDateOnOrAfterManufactureDate",
+        "abcIsReleaseDateOnOrAfterPlanDate",
+        "abcIsReleaseDateOnOrAfterManufactureDate",
+        "abcIsExpirationDateOnOrAfterReleaseDate",
+        "abcDemandDetailsKeysMatchDemandRowsExactly",
+        "abcArePlanningFrequencyChangesOnPlanningMonths"
+      ]
+    },
+    "abc-supply-plan-14.2.0.json": {
+      "unknownFormat": ["abc-draft-js_RawDraftContentState"],
+      "unknownKeywords": [
+        "abcIsFirstDayOfMonth",
+        "abcIsLastDayOfMonth",
+        "abcIsAfter0001-01-01",
+        "abcIsBefore9999-12-31",
+        "abcDoMaterialIDsExist",
+        "abcIsAcyclic",
+        "abcAreAllocationMethodsHomogeneous",
+        "abcIsValidColor",
+        "abcNoDuplicateValuesForOrderingProperty",
+        "abcHasNonOverlappingTimeDependentValues",
+        "abcHasUninterruptedTimeDependentValues",
+        "abcIsExpirationDateOnOrAfterManufactureDate",
+        "abcIsReleaseDateOnOrAfterPlanDate",
+        "abcIsReleaseDateOnOrAfterManufactureDate",
+        "abcIsExpirationDateOnOrAfterReleaseDate",
+        "abcDemandDetailsKeysMatchDemandRowsExactly",
+        "abcArePlanningFrequencyChangesOnPlanningMonths"
+      ]
+    },
+    "abc-supply-plan-14.3.0.json": {
+      "unknownFormat": ["abc-draft-js_RawDraftContentState"],
+      "unknownKeywords": [
+        "abcIsFirstDayOfMonth",
+        "abcIsLastDayOfMonth",
+        "abcIsAfter0001-01-01",
+        "abcIsBefore9999-12-31",
+        "abcDoMaterialIDsExist",
+        "abcIsAcyclic",
+        "abcAreAllocationMethodsHomogeneous",
+        "abcIsValidColor",
+        "abcNoDuplicateValuesForOrderingProperty",
+        "abcHasNonOverlappingTimeDependentValues",
+        "abcHasUninterruptedTimeDependentValues",
+        "abcIsExpirationDateOnOrAfterManufactureDate",
+        "abcIsReleaseDateOnOrAfterPlanDate",
+        "abcIsReleaseDateOnOrAfterManufactureDate",
+        "abcIsExpirationDateOnOrAfterReleaseDate",
+        "abcDemandDetailsKeysMatchDemandRowsExactly",
+        "abcArePlanningFrequencyChangesOnPlanningMonths"
+      ]
+    },
     "anywork-ac-1.0.json": {
       "externalSchema": ["base.json"]
     },
@@ -940,6 +862,10 @@
       "unknownFormat": ["uint", "uint32", "uint64"]
     },
     "apollo-router-2.9.0.json": {
+      "externalSchema": ["base.json"],
+      "unknownFormat": ["uint", "uint32", "uint64"]
+    },
+    "apollo-router-2.17.0.json": {
       "externalSchema": ["base.json"],
       "unknownFormat": ["uint", "uint32", "uint64"]
     },
@@ -961,38 +887,23 @@
     "azure-deviceupdate-update-manifest-5.json": {
       "externalSchema": ["azure-deviceupdate-manifest-definitions-5.0.json"]
     },
-    "azure-iot-edge-deployment-2.0.json": {
-      "unknownKeywords": ["examples", "contentMediaType"]
-    },
     "azure-iot-edge-deployment-template-1.0.json": {
       "externalSchema": ["azure-iot-edge-deployment-1.0.json"]
     },
     "azure-iot-edge-deployment-template-2.0.json": {
-      "externalSchema": ["azure-iot-edge-deployment-2.0.json"],
-      "unknownKeywords": ["examples", "contentMediaType"]
+      "externalSchema": ["azure-iot-edge-deployment-2.0.json"]
     },
     "azure-iot-edge-deployment-template-3.0.json": {
       "externalSchema": [
         "azure-iot-edgeagent-deployment-1.1.json",
         "azure-iot-edgehub-deployment-1.1.json"
-      ],
-      "unknownKeywords": ["examples", "contentMediaType"]
+      ]
     },
     "azure-iot-edge-deployment-template-4.0.json": {
       "externalSchema": [
         "azure-iot-edgeagent-deployment-1.1.json",
         "azure-iot-edgehub-deployment-1.2.json"
-      ],
-      "unknownKeywords": ["examples", "contentMediaType"]
-    },
-    "azure-iot-edgeagent-deployment-1.1.json": {
-      "unknownKeywords": ["examples", "contentMediaType"]
-    },
-    "azure-iot-edgehub-deployment-1.1.json": {
-      "unknownKeywords": ["examples", "contentMediaType"]
-    },
-    "azure-iot-edgehub-deployment-1.2.json": {
-      "unknownKeywords": ["examples", "contentMediaType"]
+      ]
     },
     "bitrise.json": {
       "externalSchema": ["bitrise-step.json"]
@@ -1010,6 +921,15 @@
         "quikrun.json"
       ],
       "unknownFormat": ["uint32", "semver", "semver-requirement"]
+    },
+    "cfgd-config-0.5.0.json": {
+      "unknownFormat": ["uint32"]
+    },
+    "cfgd-config-0.10.0.json": {
+      "unknownFormat": ["uint32"]
+    },
+    "cfgd-profile-0.10.0.json": {
+      "unknownFormat": ["uint32"]
     },
     "cheatsheets.json": {
       "externalSchema": ["base.json"]
@@ -1034,9 +954,6 @@
     },
     "clangd.json": {
       "externalSchema": ["base.json"]
-    },
-    "clasp.json": {
-      "externalSchema": ["base-04.json"]
     },
     "clib.json": {
       "externalSchema": ["base.json"]
@@ -1067,26 +984,11 @@
       "externalSchema": ["compilerdefaults.json"],
       "unknownFormat": ["compiler_relativepath"]
     },
+    "complexipy.json": {
+      "unknownFormat": ["uint64"]
+    },
     "creatomic.json": {
       "unknownKeywords": ["scope"]
-    },
-    "cryproj.52.schema.json": {
-      "unknownKeywords": ["$id", "examples"]
-    },
-    "cryproj.53.schema.json": {
-      "unknownKeywords": ["$id", "examples"]
-    },
-    "cryproj.54.schema.json": {
-      "unknownKeywords": ["$id", "examples"]
-    },
-    "cryproj.55.schema.json": {
-      "unknownKeywords": ["$id", "examples"]
-    },
-    "cryproj.dev.schema.json": {
-      "unknownKeywords": ["$id", "examples"]
-    },
-    "cryproj.json": {
-      "unknownKeywords": ["$id", "examples"]
     },
     "dart-build.json": {
       "unknownKeywords": ["deprecationMessage", "sources"]
@@ -1112,30 +1014,13 @@
       "externalSchema": ["partial-eslint-plugins.json"]
     },
     "expo-37.0.0.json": {
-      "unknownKeywords": [
-        "example",
-        "fallback",
-        "meta",
-        "deprecated",
-        "PWA",
-        "metatag"
-      ]
-    },
-    "expo-38.0.0.json": {
-      "unknownKeywords": ["deprecated"]
-    },
-    "expo-39.0.0.json": {
-      "unknownKeywords": ["deprecated"]
-    },
-    "expo-40.0.0.json": {
-      "unknownKeywords": ["deprecated"]
+      "unknownKeywords": ["example", "fallback", "meta", "PWA", "metatag"]
     },
     "fabric.mod.json": {
       "externalSchema": ["base.json"]
     },
     "feed.json": {
-      "externalSchema": ["feed-1.json"],
-      "unknownKeywords": ["deprecated"]
+      "externalSchema": ["feed-1.json"]
     },
     "foundryvtt-base-package-manifest.json": {
       "unknownKeywords": ["deprecationMessage"]
@@ -1152,9 +1037,6 @@
       "externalSchema": ["foundryvtt-base-package-manifest.json"],
       "unknownKeywords": ["deprecationMessage"]
     },
-    "foxx-manifest.json": {
-      "externalSchema": ["base-04.json"]
-    },
     "gematik-test-patients.json": {
       "unknownKeywords": ["existingJavaType"]
     },
@@ -1168,9 +1050,6 @@
     "gematik-test-hcpis.json": {
       "externalSchema": ["gematik-test-patients.json"],
       "unknownKeywords": ["existingJavaType"]
-    },
-    "grafana-dashboard-5.x.json": {
-      "externalSchema": ["base-04.json"]
     },
     "grunt-clean-task.json": {
       "externalSchema": ["grunt-task.json"]
@@ -1203,6 +1082,15 @@
     "jekyll.json": {
       "externalSchema": ["base.json"]
     },
+    "k2f-manifest.json": {
+      "externalSchema": ["partial-k2f-visual-primitives.json", "k2f-nodes.json"]
+    },
+    "k2f-nodes.json": {
+      "externalSchema": ["partial-k2f-visual-primitives.json"]
+    },
+    "k2f-styles.json": {
+      "externalSchema": ["partial-k2f-visual-primitives.json"]
+    },
     "jsbeautifyrc-nested.json": {
       "externalSchema": ["jsbeautifyrc.json"]
     },
@@ -1220,9 +1108,6 @@
     },
     "kestra-0.19.0.json": {
       "unknownKeywords": ["$deprecated", "$dynamic", "$metrics"]
-    },
-    "local.settings.json": {
-      "unknownKeywords": ["examples"]
     },
     "lsdlschema-0.7.json": {
       "unknownFormat": ["language", "identifier-properties", "identifier"]
@@ -1279,6 +1164,9 @@
     },
     "maturin.json": {
       "unknownFormat": ["uint16"]
+    },
+    "mdxlintrc.json": {
+      "externalSchema": ["remarkrc.json"]
     },
     "minecraft-advancement.json": {
       "externalSchema": ["base.json"]
@@ -1391,12 +1279,14 @@
         "partial-scikit-build.json",
         "partial-setuptools.json",
         "partial-setuptools-scm.json",
+        "partial-simplint.json",
         "partial-taskipy.json",
         "partial-tox.json",
         "poetry.json",
         "ruff.json",
         "tombi.json",
         "ty.json",
+        "complexipy.json",
         "uv.json",
         "base.json"
       ],
@@ -1438,6 +1328,7 @@
         "partial-cibuildwheel.json",
         "partial-dfc.json",
         "partial-fastapi.json",
+        "partial-inwards.json",
         "partial-mypy.json",
         "partial-pdm.json",
         "partial-pdm-dockerize.json",
@@ -1451,6 +1342,7 @@
         "partial-scikit-build.json",
         "partial-setuptools.json",
         "partial-setuptools-scm.json",
+        "partial-simplint.json",
         "partial-taskipy.json",
         "partial-tox.json",
         "tox.json",
@@ -1458,6 +1350,7 @@
         "ruff.json",
         "tombi.json",
         "ty.json",
+        "complexipy.json",
         "uv.json",
         "base.json",
         "quikrun.json"
@@ -1475,11 +1368,8 @@
         "pep561-stub-name"
       ]
     },
-    "rancher-fleet-0.5.json": {
-      "externalSchema": ["base.json"]
-    },
-    "rancher-fleet-0.8.json": {
-      "externalSchema": ["base.json"]
+    "rehyperc.json": {
+      "externalSchema": ["remarkrc.json"]
     },
     "renovate-41.json": {
       "unknownKeywords": ["allowComments", "x-renovate-version"]
@@ -1583,9 +1473,6 @@
         "pep561-stub-name"
       ]
     },
-    "staticwebapp.config.json": {
-      "unknownKeywords": ["examples"]
-    },
     "template.json": {
       "unknownKeywords": ["deprecationMessage", "sources"]
     },
@@ -1609,19 +1496,34 @@
       "externalSchema": ["jsconfig.json"]
     },
     "tsoa.json": {
-      "externalSchema": ["tsconfig.json", "base-04.json"]
+      "externalSchema": ["tsconfig.json"]
     },
     "ty.json": {
       "unknownFormat": ["uint16", "uint8", "uint", "int"]
+    },
+    "typo3.json": {
+      "externalSchema": [
+        "partial-typo3-imports.json",
+        "partial-typo3-route-enhancers.json"
+      ]
+    },
+    "typo3-file-storages.json": {
+      "externalSchema": ["partial-typo3-imports.json"]
+    },
+    "typo3-set-route-enhancers.json": {
+      "externalSchema": [
+        "partial-typo3-imports.json",
+        "partial-typo3-route-enhancers.json"
+      ]
+    },
+    "typo3-site-csp.json": {
+      "externalSchema": ["partial-typo3-imports.json"]
     },
     "utcm-monitor.json": {
       "unknownKeywords": ["errorMessage"]
     },
     "uv.json": {
       "unknownFormat": ["uint16", "uint8", "uint", "int"]
-    },
-    "vega.json": {
-      "unknownKeywords": ["defs", "refs", "numItems"]
     },
     "vector.json": {
       "unknownKeywords": ["_metadata"]
@@ -1656,7 +1558,9 @@
         "destinations-rules",
         "services-rules",
         "logout-rules",
-        "local-file"
+        "local-file",
+        "headers-rules",
+        "validateWhitelist"
       ]
     },
     "vespertide-migration.json": {
@@ -1664,6 +1568,45 @@
     },
     "vespertide-model.json": {
       "unknownFormat": ["uint32", "int64", "double", "int32"]
+    },
+    "cfgd-config-0.11.0.json": {
+      "unknownFormat": ["uint32"]
+    },
+    "cfgd-profile-0.11.0.json": {
+      "unknownFormat": ["uint32"]
+    },
+    "zeropress-build-pages-config-1.0.json": {
+      "unknownKeywords": ["x-zeropress-runtime-url-validation"]
+    },
+    "zeropress-preview-data-0.7.json": {
+      "unknownKeywords": [
+        "x-zeropress-identity",
+        "x-zeropress-literal-segment-nfc-max-code-points",
+        "x-zeropress-nfc-max-code-points",
+        "x-zeropress-references",
+        "x-zeropress-runtime-validation",
+        "x-zeropress-unique-after-normalization"
+      ]
+    },
+    "zeropress-theme-runtime-0.7.json": {
+      "unknownKeywords": ["x-zeropress-runtime-validation"]
+    },
+    "zeropress-wxr-import-base-0.7.json": {
+      "externalSchema": ["zeropress-preview-data-0.7.json"],
+      "unknownKeywords": [
+        "x-zeropress-identity",
+        "x-zeropress-literal-segment-nfc-max-code-points",
+        "x-zeropress-nfc-max-code-points",
+        "x-zeropress-references",
+        "x-zeropress-runtime-validation",
+        "x-zeropress-unique-after-normalization"
+      ]
+    },
+    "cfgd-config-0.12.0.json": {
+      "unknownFormat": ["uint32"]
+    },
+    "cfgd-profile-0.12.0.json": {
+      "unknownFormat": ["uint32"]
     }
   }
 }

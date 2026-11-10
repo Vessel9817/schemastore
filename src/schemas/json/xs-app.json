@@ -1,10 +1,17 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://json.schemastore.org/xs-app.json",
-  "$comment": "Based on https://github.wdf.sap.corp/xs2/approuter.js/blob/master/lib/configuration/schemas/xs-app-schema.json",
+  "$comment": "Based on xs-app-schema.json from @sap/approuter v23. Source: /lib/configuration/schemas/xs-app-schema.json within @sap/approuter",
   "definitions": {
     "sourceSchema": {
-      "type": ["string", "object"],
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ],
       "minLength": 1,
       "format": "regex",
       "additionalProperties": false,
@@ -21,7 +28,17 @@
       "required": ["path"]
     },
     "scopesSchema": {
-      "type": ["string", "array", "object"],
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array"
+        },
+        {
+          "type": "object"
+        }
+      ],
       "minProperties": 1,
       "additionalProperties": false,
       "properties": {
@@ -64,13 +81,109 @@
       }
     },
     "scopeTemplate": {
-      "type": ["string", "array"],
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array"
+        }
+      ],
       "minLength": 1,
       "minItems": 1,
       "items": {
         "type": "string",
         "minLength": 1
       }
+    },
+    "hostPatternSchema": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ],
+      "minLength": 1,
+      "additionalProperties": true
+    },
+    "allowedOriginItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "host": {
+          "type": "string",
+          "minLength": 1
+        },
+        "protocol": {
+          "type": "string",
+          "minLength": 1
+        },
+        "port": {
+          "type": "integer"
+        }
+      },
+      "required": ["host"]
+    },
+    "corsConfigItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "uriPattern": {
+          "$ref": "#/definitions/sourceSchema"
+        },
+        "hostPattern": {
+          "$ref": "#/definitions/hostPatternSchema"
+        },
+        "allowedOrigin": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/allowedOriginItem"
+          }
+        },
+        "allowedMethods": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "enum": [
+              "DELETE",
+              "GET",
+              "HEAD",
+              "OPTIONS",
+              "POST",
+              "PUT",
+              "TRACE",
+              "PATCH"
+            ]
+          }
+        },
+        "allowedHeaders": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "allowedCredentials": {
+          "type": "boolean"
+        },
+        "exposeHeaders": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "maxAge": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": ["allowedOrigin", "uriPattern"]
     }
   },
   "description": "Application Router Configuration Schema",
@@ -82,6 +195,9 @@
     "authenticationMethod": {
       "type": "string",
       "enum": ["none", "route"]
+    },
+    "stateProtection": {
+      "type": "boolean"
     },
     "sessionTimeout": {
       "type": "integer",
@@ -128,11 +244,22 @@
             "type": "string",
             "minLength": 1
           },
+          "destinationAuth": {
+            "type": "string",
+            "enum": ["ias", "xsuaa"],
+            "default": "xsuaa"
+          },
+          "setBackendSessionCookies": {
+            "type": "boolean"
+          },
           "localDir": {
             "type": "string",
             "minLength": 1
           },
           "csrfProtection": {
+            "type": "boolean"
+          },
+          "preferLocal": {
             "type": "boolean"
           },
           "service": {
@@ -143,11 +270,14 @@
           },
           "authenticationType": {
             "type": "string",
-            "enum": ["xsuaa", "basic", "ias", "none"]
+            "enum": ["xsuaa", "ias", "basic", "none"]
           },
           "identityProvider": {
             "type": "string",
             "minLength": 1
+          },
+          "dynamicIdentityProvider": {
+            "type": "boolean"
           },
           "scope": {
             "$ref": "#/definitions/scopesSchema"
@@ -184,6 +314,26 @@
           }
         },
         "required": ["source"]
+      }
+    },
+    "responseHeaders": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "format": "headers-rules"
+          },
+          "value": {
+            "type": "string",
+            "minLength": 1,
+            "format": "valid-header-value"
+          }
+        },
+        "required": ["name", "value"]
       }
     },
     "destinations": {
@@ -233,6 +383,11 @@
       "additionalProperties": false,
       "format": "logout-rules",
       "properties": {
+        "backChannelLogoutEndpoint": {
+          "type": "string",
+          "minLength": 1,
+          "format": "relative-uri"
+        },
         "logoutEndpoint": {
           "type": "string",
           "minLength": 1,
@@ -242,6 +397,13 @@
           "type": "string",
           "minLength": 1,
           "format": "uri"
+        },
+        "logoutMethod": {
+          "type": "string",
+          "enum": ["POST", "GET"]
+        },
+        "csrfProtection": {
+          "type": "boolean"
         }
       }
     },
@@ -279,6 +441,9 @@
         "minSize": {
           "type": "integer",
           "minimum": 1
+        },
+        "compressResponseMixedTypeContent": {
+          "type": "boolean"
         }
       }
     },
@@ -294,13 +459,20 @@
     },
     "errorPage": {
       "type": "array",
-      "additionalProperties": false,
       "items": {
         "type": "object",
-        "required": ["status", "file"],
+        "required": ["status"],
+        "oneOf": [{ "required": ["file"] }, { "required": ["path"] }],
         "properties": {
           "status": {
-            "type": ["integer", "array"],
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "array"
+              }
+            ],
             "minimum": 1,
             "minItems": 1,
             "uniqueItems": true,
@@ -313,11 +485,23 @@
             "type": "string",
             "minLength": 1,
             "format": "local-file"
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1,
+            "format": "relative-uri"
           }
         }
       }
+    },
+    "cors": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/definitions/corsConfigItem"
+      }
     }
   },
-  "title": "com.sap.xsapp.schema_8.2",
+  "title": "SAP Application Router Configuration",
   "type": "object"
 }
